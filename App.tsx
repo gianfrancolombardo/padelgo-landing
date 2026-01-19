@@ -9,9 +9,9 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#1A1D1A] text-[#FAFAFA] min-h-screen overflow-x-hidden">
+    <div className="min-h-screen bg-[#020202] text-[#FAFAFA] overflow-x-hidden">
       <Header />
-      <main>
+      <main className="w-full">
         <HeroSection />
         <ProblemSection />
         <SolutionSection />
