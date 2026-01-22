@@ -3,10 +3,10 @@ import { Clock, Ban, TrendingDown } from 'lucide-react';
 
 const PainPoint: React.FC<{ icon: React.ReactNode; title: string; children: React.ReactNode; delay: string }> = ({ icon, title, children, delay }) => (
   <div className="glass-card p-8 rounded-2xl flex flex-col items-start hover:bg-white/5 transition-all duration-500 transform hover:-translate-y-2 group border border-white/5 hover:border-white/10" style={{ animationDelay: delay }}>
-    <div className="mb-6 flex items-center justify-center h-14 w-14 text-white/50 bg-white/5 rounded-xl border border-white/10 group-hover:text-padel-green group-hover:border-padel-green/30 group-hover:bg-padel-green/10 transition-all duration-500">
+    <div className="mb-6 flex items-center justify-center h-14 w-14 text-white/50 bg-white/5 rounded-xl border border-white/10 group-hover:text-volea-green group-hover:border-volea-green/30 group-hover:bg-volea-green/10 transition-all duration-500">
       {icon}
     </div>
-    <h3 className="text-xl font-display tracking-wider mb-3 text-white group-hover:text-padel-green transition-colors duration-300">{title}</h3>
+    <h3 className="text-xl font-display tracking-wider mb-3 text-white group-hover:text-volea-green transition-colors duration-300">{title}</h3>
     <p className="text-gray-300 font-light leading-relaxed group-hover:text-gray-200 transition-colors">{children}</p>
   </div>
 );
@@ -28,9 +28,9 @@ const ProblemSection: React.FC = () => {
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl md:text-6xl font-display uppercase mb-6 leading-none">
             <span className="text-white/30">Deja de Jugar</span> Partidos.<br />
-            Empieza a <span className="text-padel-green">Entrenar</span>.
+            Empieza a <span className="text-volea-green">Entrenar</span>.
           </h2>
-          <p className="text-lg text-gray-300 font-light max-w-xl border-l-2 border-padel-green pl-6 py-2">
+          <p className="text-lg text-gray-300 font-light max-w-xl border-l-2 border-volea-green pl-6 py-2">
             El 90% de los jugadores amateur se estancan porque compiten más de lo que practican.
             <br /><span className="text-white/60 text-sm mt-2 block">La realidad es frustrante:</span>
           </p>

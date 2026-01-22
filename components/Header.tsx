@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2 animate-slide-down" style={{ animationDelay: '0s' }}>
           <span className="text-2xl font-display tracking-widest text-white cursor-pointer select-none">
-            PADEL<span className="text-padel-green">GO</span>
+            VOLEA<span className="text-volea-green">BOX</span>
           </span>
         </div>
 
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           <a href="#beneficios" className="text-sm font-light tracking-wide text-gray-300 hover:text-white transition-colors">BENEFICIOS</a>
         </nav>
 
-        <button className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-padel-green hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-slide-down" style={{ animationDelay: '0.2s' }}>
+        <button className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-volea-green hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-slide-down" style={{ animationDelay: '0.2s' }}>
           WAITLIST
         </button>
       </div>

@@ -3,11 +3,11 @@ import { CheckCircle2 } from 'lucide-react';
 
 const BenefitItem: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <div className="flex flex-col gap-4 p-6 rounded-2xl border border-transparent hover:border-white/5 hover:bg-white/5 transition-all duration-500 group">
-        <div className="text-padel-green group-hover:scale-110 transition-transform duration-300 origin-left">
+        <div className="text-volea-green group-hover:scale-110 transition-transform duration-300 origin-left">
             <CheckCircle2 size={32} strokeWidth={1.5} />
         </div>
         <div>
-            <h3 className="text-2xl font-display uppercase tracking-wider text-white mb-2 group-hover:text-padel-green transition-colors">{title}</h3>
+            <h3 className="text-2xl font-display uppercase tracking-wider text-white mb-2 group-hover:text-volea-green transition-colors">{title}</h3>
             <p className="text-gray-300 font-light leading-relaxed">{children}</p>
         </div>
     </div>
@@ -21,7 +21,7 @@ const BenefitsSection: React.FC = () => {
                     <div>
                         <h2 className="text-4xl sm:text-6xl font-display font-bold leading-none mb-6">
                             EL SECRETO DE <br />
-                            LOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-padel-green to-emerald-600">PROFESIONALES</span>.
+                            LOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-volea-green to-emerald-600">PROFESIONALES</span>.
                         </h2>
                         <p className="text-xl text-gray-300 font-light max-w-md">
                             La diferencia entre un amateur y un pro no es el talento, es la cantidad de bolas que golpean fuera de partido.

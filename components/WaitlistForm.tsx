@@ -17,8 +17,8 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
     setMessage('');
 
     const formData = new FormData(e.currentTarget);
-    formData.append("from_name", "Padel GO Waitlist");
-    formData.append("subject", "New Waitlist Submission from Padel GO");
+    formData.append("from_name", "VoleaBox Waitlist");
+    formData.append("subject", "New Waitlist Submission from VoleaBox");
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
@@ -55,13 +55,13 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
           placeholder="tucorreo@ejemplo.com"
           required
           disabled={status === 'submitting' || status === 'success'}
-          className="flex-grow w-full px-6 py-4 text-base bg-white/5 text-white border border-white/10 rounded-full focus:ring-1 focus:ring-padel-green focus:border-padel-green focus:outline-none transition-all placeholder:text-gray-600 disabled:opacity-50 backdrop-blur-sm peer"
+          className="flex-grow w-full px-6 py-4 text-base bg-white/5 text-white border border-white/10 rounded-full focus:ring-1 focus:ring-volea-green focus:border-volea-green focus:outline-none transition-all placeholder:text-gray-600 disabled:opacity-50 backdrop-blur-sm peer"
         />
 
         <button
           type="submit"
           disabled={status === 'submitting' || status === 'success'}
-          className="bg-padel-green text-padel-dark font-bold tracking-wide text-base px-8 py-4 rounded-full hover:bg-white hover:text-padel-dark transition-all transform hover:scale-105 flex items-center justify-center gap-2 group disabled:bg-gray-800 disabled:text-gray-500 disabled:scale-100 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(59,255,118,0.2)] hover:shadow-[0_0_30px_rgba(59,255,118,0.4)] whitespace-nowrap"
+          className="bg-volea-green text-volea-dark font-bold tracking-wide text-base px-8 py-4 rounded-full hover:bg-white hover:text-volea-dark transition-all transform hover:scale-105 flex items-center justify-center gap-2 group disabled:bg-gray-800 disabled:text-gray-500 disabled:scale-100 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(59,255,118,0.2)] hover:shadow-[0_0_30px_rgba(59,255,118,0.4)] whitespace-nowrap"
         >
           <span>
             {status === 'submitting' ? 'Enviando' : buttonText}
@@ -80,7 +80,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
 
       <div className="text-sm mt-4 h-6 font-light flex justify-center items-center">
         {status === 'idle' && <p className="text-gray-500 animate-fade-in">{microCopy}</p>}
-        {status === 'success' && <p className="text-padel-green flex items-center gap-2 animate-fade-in"><Check size={16} /> {message}</p>}
+        {status === 'success' && <p className="text-volea-green flex items-center gap-2 animate-fade-in"><Check size={16} /> {message}</p>}
         {status === 'error' && <p className="text-red-400 flex items-center gap-2 animate-fade-in"><AlertCircle size={16} /> {message}</p>}
       </div>
     </div>
