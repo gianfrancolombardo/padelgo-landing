@@ -15,8 +15,9 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled ? 'glass py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2 animate-slide-down" style={{ animationDelay: '0s' }}>
-          <span className="text-2xl font-display tracking-widest text-white cursor-pointer select-none">
-            VOLEA<span className="text-volea-green">BOX</span>
+          <span className="text-2xl font-display tracking-widest text-white cursor-pointer select-none flex items-center gap-2">
+            <img src="/icon.png" alt="VoleaBox Icon" className="h-6 w-auto object-contain pb-1" />
+            <span>VOLEA<span className="text-volea-green">BOX</span></span>
           </span>
         </div>
 
