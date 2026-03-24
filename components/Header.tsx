@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const isClubs = typeof window !== 'undefined' && window.location.pathname === '/clubs';
+  const isPascal = typeof window !== 'undefined' && window.location.pathname === '/pascalbox';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,25 +13,48 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Home link logic: on sub-pages, the logo just scrolls to top (no external navigation)
+  const homeLink = isClubs || isPascal ? "#" : "/";
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled ? 'glass py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2 animate-slide-down" style={{ animationDelay: '0s' }}>
-          <span className="text-2xl font-display tracking-widest text-white cursor-pointer select-none flex items-center gap-2">
+          <a href={homeLink} className="text-2xl font-display tracking-widest text-white cursor-pointer select-none flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img src="/icon.png" alt="VoleaBox Icon" className="h-6 w-auto object-contain pb-1" />
             <span>VOLEA<span className="text-volea-green">BOX</span></span>
-          </span>
+          </a>
         </div>
 
-        <nav className="hidden md:flex gap-8 items-center animate-slide-down" style={{ animationDelay: '0.1s' }}>
-          <a href="#problema" className="text-sm font-light tracking-wide text-gray-300 hover:text-white transition-colors">PROBLEMA</a>
-          <a href="#solucion" className="text-sm font-light tracking-wide text-gray-300 hover:text-white transition-colors">SOLUCIÓN</a>
-          <a href="#beneficios" className="text-sm font-light tracking-wide text-gray-300 hover:text-white transition-colors">BENEFICIOS</a>
+        <nav className="hidden md:flex gap-10 items-center animate-slide-down" style={{ animationDelay: '0.1s' }}>
+          {isPascal ? (
+            <>
+              <a href="#vision" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Visión de Alianza</a>
+              <a href="#integracion" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Integración Tech</a>
+              <a href="#acuerdo" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Acuerdo de Valor</a>
+              <a href="#contacto" className="bg-volea-green text-black px-6 py-2 rounded-full text-[10px] font-black tracking-[0.2em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,255,118,0.2)]">AGENDAR REUNIÓN</a>
+            </>
+          ) : isClubs ? (
+            <>
+              <a href="#problema" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">El Desafío</a>
+              <a href="#solucion" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">La Solución</a>
+              <a href="#operativa" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Operativa 360</a>
+              <a href="#contacto" className="bg-volea-green text-black px-6 py-2 rounded-full text-[10px] font-black tracking-[0.2em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,255,118,0.2)] uppercase">AGENDAR ESTUDIO</a>
+            </>
+          ) : (
+            <>
+              <a href="#problema" className="text-xs font-bold tracking-[0.2em] text-gray-300 hover:text-white transition-colors uppercase">PROBLEMA</a>
+              <a href="#solucion" className="text-xs font-bold tracking-[0.2em] text-gray-300 hover:text-white transition-colors uppercase">SOLUCIÓN</a>
+              <a href="#beneficios" className="text-xs font-bold tracking-[0.2em] text-gray-300 hover:text-white transition-colors uppercase">BENEFICIOS</a>
+            </>
+          )}
         </nav>
 
-        <button className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-volea-green hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-slide-down" style={{ animationDelay: '0.2s' }}>
-          WAITLIST
-        </button>
+        {!isClubs && !isPascal && (
+          <button className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-volea-green hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-slide-down" style={{ animationDelay: '0.2s' }}>
+            WAITLIST
+          </button>
+        )}
       </div>
     </header>
   );
