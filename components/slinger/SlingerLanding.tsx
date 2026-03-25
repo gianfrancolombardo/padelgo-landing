@@ -11,7 +11,8 @@ import SlingerCtaSection from './sections/SlingerCtaSection';
 
 const SlingerLanding: React.FC = () => {
   useEffect(() => {
-    document.title = "Slinger Partnership | VoleaBox B2B";
+    window.scrollTo(0, 0);
+    document.title = "VoleaBox x Slinger | Entrenamiento de Élite Automatizado";
   }, []);
 
   return (

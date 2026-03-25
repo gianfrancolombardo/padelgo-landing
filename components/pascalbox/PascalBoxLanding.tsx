@@ -10,6 +10,7 @@ import PascalCtaSection from './sections/PascalCtaSection';
 const PascalBoxLanding: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "VoleaBox x Pascal Box | Alianza en Mantenimiento de Pelotas";
   }, []);
 
   return (

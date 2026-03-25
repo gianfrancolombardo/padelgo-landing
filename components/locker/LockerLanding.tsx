@@ -11,6 +11,7 @@ import LockerCtaSection from './sections/LockerCtaSection';
 const LockerLanding: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "VoleaBox | Partnership Estratégica para Smart Lockers";
   }, []);
 
   return (

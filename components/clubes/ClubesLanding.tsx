@@ -12,6 +12,7 @@ const ClubesLanding: React.FC = () => {
   // Ensure we start at the top
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "VoleaBox | Rentabilidad y Automatización para Clubes de Pádel";
   }, []);
 
   return (
