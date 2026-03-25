@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const isClubs = typeof window !== 'undefined' && window.location.pathname === '/clubs';
+  const isClubs = typeof window !== 'undefined' && (window.location.pathname === '/clubs' || window.location.pathname === '/clubes');
   const isPascal = typeof window !== 'undefined' && window.location.pathname === '/pascalbox';
+  const isSlinger = typeof window !== 'undefined' && window.location.pathname === '/slinger';
+  const isLocker = typeof window !== 'undefined' && window.location.pathname === '/lockers';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +16,7 @@ const Header: React.FC = () => {
   }, []);
 
   // Home link logic: on sub-pages, the logo just scrolls to top (no external navigation)
-  const homeLink = isClubs || isPascal ? "#" : "/";
+  const homeLink = isClubs || isPascal || isSlinger || isLocker ? "#" : "/";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${scrolled ? 'glass py-4' : 'bg-transparent py-6'}`}>
@@ -41,6 +43,22 @@ const Header: React.FC = () => {
               <a href="#operativa" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Operativa 360</a>
               <a href="#contacto" className="bg-volea-green text-black px-6 py-2 rounded-full text-[10px] font-black tracking-[0.2em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,255,118,0.2)] uppercase">AGENDAR ESTUDIO</a>
             </>
+          ) : isSlinger ? (
+            <>
+              <a href="#oportunidad" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">El Desafío</a>
+              <a href="#showroom" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Showroom</a>
+              <a href="#experiencia" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Operativa</a>
+              <a href="#b2b" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Modelo B2B</a>
+              <a href="#contacto" className="bg-volea-green text-black px-6 py-2 rounded-full text-[10px] font-black tracking-[0.2em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,255,118,0.2)] uppercase">AGENDAR REUNIÓN</a>
+            </>
+          ) : isLocker ? (
+            <>
+              <a href="#mercado" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Mercado</a>
+              <a href="#hardware" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Hardware</a>
+              <a href="#software" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Software</a>
+              <a href="#volumen" className="text-xs font-bold tracking-[0.2em] text-gray-400 hover:text-white transition-colors uppercase">Volumen</a>
+              <a href="#contacto" className="bg-volea-green text-black px-6 py-2 rounded-full text-[10px] font-black tracking-[0.2em] hover:scale-105 transition-all shadow-[0_0_20px_rgba(59,255,118,0.2)] uppercase">BRIEFING TÉCNICO</a>
+            </>
           ) : (
             <>
               <a href="#problema" className="text-xs font-bold tracking-[0.2em] text-gray-300 hover:text-white transition-colors uppercase">PROBLEMA</a>
@@ -50,7 +68,7 @@ const Header: React.FC = () => {
           )}
         </nav>
 
-        {!isClubs && !isPascal && (
+        {!isClubs && !isPascal && !isSlinger && !isLocker && (
           <button className="bg-white text-black px-6 py-2 rounded-full text-xs font-bold tracking-widest hover:bg-volea-green hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.3)] animate-slide-down" style={{ animationDelay: '0.2s' }}>
             WAITLIST
           </button>
