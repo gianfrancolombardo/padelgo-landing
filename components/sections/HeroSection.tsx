@@ -23,14 +23,14 @@ const HeroSection: React.FC = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            La primera red de máquinas de bolas 100% automatizadas.
-            <br className="hidden md:block" />Reserva en tu club y entrena como un pro.
+            La primera red de entrenamiento autónomo y sostenible para pádel y tenis.
+            <br className="hidden md:block" />Abre la app y entrena como un pro.
           </p>
 
           <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <WaitlistForm
               buttonText={<>ÚNETE A LA REVOLUCIÓN</>}
-              microCopy="Acceso exclusivo para early adopters."
+              microCopy="Plazas limitadas para los primeros jugadores en Barcelona."
             />
           </div>
         </div>

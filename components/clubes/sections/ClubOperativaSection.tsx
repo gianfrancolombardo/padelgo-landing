@@ -12,7 +12,7 @@ const ClubOperativaSection: React.FC = () => {
               CERO <span className="text-volea-green">FRICCIÓN</span>, CERO RIESGO
             </h2>
             <p className="text-lg text-[#D1D5DB] font-light mb-12 max-w-md leading-relaxed">
-              Hemos diseñado una operativa que no suma ni un minuto de trabajo extra para su recepción.
+              Hemos diseñado una operativa que no suma ni un minuto de trabajo extra para tu recepción.
             </p>
 
             <div className="space-y-8">
@@ -23,7 +23,7 @@ const ClubOperativaSection: React.FC = () => {
                 <div>
                   <h4 className="text-xl font-display text-white mb-2">100% Autónomo</h4>
                   <p className="text-sm text-gray-400 font-light leading-relaxed">
-                    Reservas, pagos y apertura de la Box gestionado enteramente vía App. Cero sobrecarga administrativa.
+                    Reservas, pagos y apertura de la taquilla gestionados enteramente vía app. Cero sobrecarga administrativa.
                   </p>
                 </div>
               </div>
@@ -33,9 +33,9 @@ const ClubOperativaSection: React.FC = () => {
                   <Wifi className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-display text-white mb-2">Instalación Plug & Play</h4>
+                  <h4 className="text-xl font-display text-white mb-2">Instalación sin obras</h4>
                   <p className="text-sm text-gray-400 font-light leading-relaxed">
-                    Instalación sin obras y en el mismo día. Hardware con conectividad 4G propietaria (no sobrecargamos su Wi-Fi).
+                    Instalación en el mismo día. Hardware con conectividad 4G propia, sin sobrecargar tu Wi-Fi.
                   </p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const ClubOperativaSection: React.FC = () => {
                   <div className="flex items-center gap-6 relative z-10">
                     <div className="w-11 h-11 rounded-full bg-[#1A1D1A] border-2 border-volea-green flex items-center justify-center font-display text-xl text-volea-green shadow-[0_0_10px_rgba(59,255,118,0.3)] shrink-0">1</div>
                     <div>
-                      <h4 className="text-lg font-bold text-white leading-tight">RESERVA LOCAL</h4>
+                      <h4 className="text-lg font-bold text-white leading-tight">RESERVA</h4>
                       <p className="text-xs text-gray-300 mt-1">El jugador confirma su acceso desde el móvil al instante.</p>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ const ClubOperativaSection: React.FC = () => {
                   <div className="flex items-center gap-6 relative z-10">
                     <div className="w-11 h-11 rounded-full bg-[#1A1D1A] border-2 border-white/20 flex items-center justify-center font-display text-xl text-white shrink-0">3</div>
                     <div>
-                      <h4 className="text-lg font-bold text-white leading-tight">MEJORA 360º</h4>
+                      <h4 className="text-lg font-bold text-white leading-tight">MEJORA</h4>
                       <p className="text-xs text-gray-300 mt-1">Slinger, presurizador y material premium listos en pista.</p>
                     </div>
                   </div>

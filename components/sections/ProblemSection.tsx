@@ -31,20 +31,20 @@ const ProblemSection: React.FC = () => {
             Empieza a <span className="text-volea-green">Entrenar</span>.
           </h2>
           <p className="text-lg text-gray-300 font-light max-w-xl border-l-2 border-volea-green pl-6 py-2">
-            El 90% de los jugadores amateur se estancan porque compiten más de lo que practican.
+            El 90% de los jugadores amateur se estanca porque compite más de lo que practica.
             <br /><span className="text-white/60 text-sm mt-2 block">La realidad es frustrante:</span>
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-7xl">
           <PainPoint icon={<Clock size={28} strokeWidth={1.5} />} title="LOGÍSTICA INVIABLE" delay="0s">
-            ¿Comprar una máquina? 2.000€, cargarla en el coche, buscar enchufes... Demasiada fricción para entrenar una hora.
+            Sin invertir en equipamiento propio, sin cargar equipo pesado ni buscar enchufes. Demasiada fricción para entrenar una hora.
           </PainPoint>
-          <PainPoint icon={<Ban size={28} strokeWidth={1.5} />} title="CLASES CARÍSIMAS" delay="0.1s">
-            Pagar 40-50€/hora para que un profesor te tire bolas a la mano. Quieres volumen de repetición, no correcciones constantes.
+          <PainPoint icon={<Ban size={28} strokeWidth={1.5} />} title="DEPENDENCIA DE TERCEROS" delay="0.1s">
+            ¿Esperando a que alguien tenga hueco? ¿Coordinando horarios con tu pareja de entrenamientos? Quieres repetición, no gestión.
           </PainPoint>
           <PainPoint icon={<TrendingDown size={28} strokeWidth={1.5} />} title="ESTANCAMIENTO" delay="0.2s">
-            Juegas 3 veces por semana pero tu víbora sigue saliendo al cristal. Sin repetición aislada, no hay memoria muscular.
+            Juegas tres veces por semana pero tu víbora sigue saliendo al cristal. Sin repetición aislada, no hay memoria muscular.
           </PainPoint>
         </div>
       </div>

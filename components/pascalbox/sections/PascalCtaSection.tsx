@@ -10,11 +10,11 @@ const PascalCtaSection: React.FC = () => {
          <div className="max-w-4xl mx-auto text-center border border-white/10 p-16 rounded-[3rem] bg-[#0A0A0A]/40 backdrop-blur-md">
            
            <h2 className="text-4xl md:text-7xl font-display text-white mb-8 tracking-wider">
-             DEFINAMOS EL <br /> <span className="text-volea-green underline decoration-volea-green/20 underline-offset-8">ESTÁNDAR</span> JUNTOS
+             HABLAMOS
            </h2>
            
-           <p className="text-lg md:text-xl text-[#D1D5DB] font-light max-w-2xl mx-auto mb-14">
-             Lideremos la transición hacia un deporte de raqueta sostenible y de alta tecnología. Estamos listos para integrar Pascal Box como el estándar de calidad VoleaBox en nuestro despliegue 2026.
+           <p className="text-lg md:text-xl text-[#D1D5DB] font-light max-w-2xl mx-auto mb-14 leading-relaxed">
+             Lideremos juntos la transición hacia un deporte de raqueta sostenible y tecnológico en España. Tenemos el canal, los clubes y la operativa. Vosotros tenéis la mejor tecnología de presurización del mercado. Tiene todo el sentido hacerlo juntos.
            </p>
 
            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
@@ -39,8 +39,8 @@ const PascalCtaSection: React.FC = () => {
          </div>
        </div>
 
-       <div className="text-center py-10 opacity-20">
-          <p className="text-[10px] tracking-[0.5em] font-bold uppercase text-white">VoleaBox x Pascal Box | Alliance Draft Q1 2026</p>
+       <div className="text-center py-10 opacity-40">
+          <p className="text-[10px] tracking-[0.5em] font-bold uppercase text-white">Carlos Neidl — Co-Founder — Barcelona, España</p>
        </div>
     </section>
   );

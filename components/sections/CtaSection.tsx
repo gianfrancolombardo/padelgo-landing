@@ -14,13 +14,13 @@ const CtaSection: React.FC = () => {
             <span className="text-volea-green">¿Y TÚ?</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 font-light tracking-wide">
-            Estamos cerrando acuerdos con los primeros clubes en Barcelona. <br />
-            Sé el primero en probar la experiencia VoleaBox.
+            Estamos cerrando acuerdos con los primeros clubes de Barcelona. <br />
+            Apúntate y sé el primero en probar la experiencia VoleaBox.
           </p>
 
           <WaitlistForm
             buttonText="QUIERO MEJORAR YA"
-            microCopy="Acceso prioritario y descuento para los primeros 500 inscritos."
+            microCopy="Acceso prioritario para los primeros inscritos."
           />
         </div>
       </div>

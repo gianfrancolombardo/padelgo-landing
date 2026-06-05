@@ -12,16 +12,16 @@ const SlingerCtaSection: React.FC = () => {
           
           <div className="mb-4">
             <span className="inline-block border border-volea-green/30 bg-volea-green/5 text-volea-green px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em]">
-              CONTACTO FUNDADORES
+              HABLAMOS
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white max-w-3xl mb-6">
-            Definamos juntos el nuevo estándar de entrenamiento.
+            Definamos juntos el nuevo estándar de entrenamiento autónomo en España.
           </h2>
 
           <p className="text-[#A1A1AA] text-lg max-w-2xl font-light mb-12">
-            Estamos listos para estandarizar nuestra flota operando exclusivamente con la tecnología Slinger. Analicemos los números y escalemos esta propuesta de valor.
+            Estamos listos para estandarizar nuestra flota operando exclusivamente con la tecnología Slinger. Analicemos los números juntos y escalemos esta propuesta de valor.
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 items-center justify-center max-w-2xl w-full">
@@ -47,7 +47,7 @@ const SlingerCtaSection: React.FC = () => {
           </div>
 
           <div className="mt-12 text-[#A1A1AA] font-light text-sm flex items-center gap-2">
-            <span>Carlos Neidl — Co-Founder </span> | <span> Barcelona, España</span>
+            <span>Carlos Neidl — Co-Founder</span> | <span>Barcelona, España</span>
           </div>
 
         </div>

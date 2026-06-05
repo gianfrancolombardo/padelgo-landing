@@ -62,10 +62,10 @@ const SlingerPartnershipSection: React.FC = () => {
           <div className="order-1 lg:order-2">
             <div className="text-volea-green text-sm font-bold tracking-[0.3em] mb-4 uppercase">EL SHOWROOM DEFINITIVO</div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-              SlingerBag: De E-commerce a <span className="text-volea-green">Experiencia Ubicua</span>
+              SlingerBag: <span className="text-volea-green">de la tienda online a la experiencia en pista.</span>
             </h2>
             <p className="text-[#A1A1AA] text-lg md:text-xl mb-12 font-light leading-relaxed">
-              Transformamos cada alquiler en una demostración de producto activa. Slinger deja de ser un objeto estático en una caja para convertirse en la herramienta de mejora diaria en los clubes más prestigiosos.
+              Transformamos cada sesión en una demostración de producto activa. Slinger deja de ser un objeto estático en una caja para convertirse en la herramienta de mejora diaria en los clubes más prestigiosos de España.
             </p>
 
             <div className="space-y-10">
@@ -75,7 +75,7 @@ const SlingerPartnershipSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-white mb-2">Visibilidad de Élite</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">Lockers de diseño industrial situados a pie de las pistas centrales. Máxima exposición visual ante el target más cualificado.</p>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">Taquillas de diseño situadas a pie de pista central. Máxima exposición visual ante el perfil de jugador más cualificado de Barcelona.</p>
                 </div>
               </div>
 
@@ -85,7 +85,7 @@ const SlingerPartnershipSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-white mb-2">Prueba Social Pagada</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">El usuario paga por probar su tecnología. Cero coste de adquisición para Slinger; puro retorno en validación y confianza de marca.</p>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">El jugador paga por probar tu tecnología. Cero coste de adquisición para Slinger, puro retorno en validación y confianza de marca.</p>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ const SlingerPartnershipSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-2xl font-bold text-white mb-2">Simbiosis Tecnológica</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">Integración con Pascal Box para garantizar que cada bola lanzada por la Slinger tenga la presión reglamentaria, protegiendo su mecánica.</p>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">Integración con un sistema de presurización profesional para garantizar que cada pelota lanzada por la Slinger tenga la presión reglamentaria, protegiendo su mecánica y la experiencia del jugador.</p>
                 </div>
               </div>
             </div>

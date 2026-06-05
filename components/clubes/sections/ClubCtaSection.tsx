@@ -16,24 +16,24 @@ const ClubCtaSection: React.FC = () => {
               <span>VOLEABOX EXPANSIÓN</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-display text-white mb-6 leading-tight">
-              AUMENTE EL <span className="text-volea-green">RENDIMIENTO</span> DE SU CLUB
+              AUMENTA EL <span className="text-volea-green">RENDIMIENTO</span> DE TU CLUB
             </h2>
             <p className="text-lg md:text-xl text-[#D1D5DB] font-light max-w-lg mb-10 leading-relaxed">
-               Únase a la red de instalaciones premium. Solicite un análisis de viabilidad técnica y descubra la rentabilidad exacta de convertir sus horas valle en ingresos activos, sin riesgo financiero.
+               Únete a la red de instalaciones premium de Barcelona. Solicita un análisis de viabilidad y descubre cómo convertir tus horas valle en ingresos activos, sin riesgo financiero.
             </p>
 
             <a 
               href="mailto:carlos@voleabox.com?subject=Solicitud%20de%20An%C3%A1lisis%20de%20Viabilidad%20-%20Club" 
               className="group inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-full text-sm font-bold tracking-widest hover:bg-volea-green transition-all duration-300 shadow-[0_4px_20px_rgba(255,255,255,0.1)] hover:shadow-[0_4px_30px_rgba(59,255,118,0.3)]"
             >
-               AGENDAR ESTUDIO DE VIABILIDAD
+               SOLICITAR ESTUDIO DE VIABILIDAD
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
 
           <div className="flex-1 w-full max-w-md">
             <div className="glass-card rounded-3xl border border-white/10 p-10 bg-[#0A0A0A]">
-               <h3 className="text-xl font-display text-white mb-8 border-b border-white/10 pb-4">CONTACTO CORPORATIVO</h3>
+               <h3 className="text-xl font-display text-white mb-8 border-b border-white/10 pb-4">CONTACTO</h3>
                
                <div className="space-y-8">
                  <div className="flex items-start gap-4 group">
@@ -41,7 +41,7 @@ const ClubCtaSection: React.FC = () => {
                      <Mail className="w-5 h-5 text-gray-400 group-hover:text-volea-green transition-colors" />
                    </div>
                    <div>
-                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Email Directo</span>
+                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Email</span>
                      <a href="mailto:carlos@voleabox.com" className="text-white hover:text-volea-green transition-colors font-medium text-lg">carlos@voleabox.com</a>
                    </div>
                  </div>
@@ -51,9 +51,9 @@ const ClubCtaSection: React.FC = () => {
                      <Phone className="w-5 h-5 text-gray-400 group-hover:text-volea-green transition-colors" />
                    </div>
                    <div>
-                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Director de Expansión (Carlos Neidl)</span>
+                     <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Carlos Neidl - Director de Expansión</span>
                      <a href="tel:+34655720515" className="text-white hover:text-volea-green transition-colors font-medium text-lg">+34 655 720 515</a>
-                     <span className="block text-sm text-gray-500 mt-1 font-light">Sede Central: Barcelona</span>
+                     <span className="block text-sm text-gray-500 mt-1 font-light">Barcelona</span>
                    </div>
                  </div>
                </div>

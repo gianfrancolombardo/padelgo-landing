@@ -33,7 +33,7 @@ const SolutionSection: React.FC = () => {
             EL PROCESO <span className="text-volea-green">VOLEABOX</span>
           </h2>
           <p className="text-gray-400 font-light text-lg">
-            Simplificamos tu entrenamiento en 3 pasos.
+            Lo hemos simplificado en 3 pasos para que no pierdas ni un minuto.
           </p>
         </div>
 
@@ -41,21 +41,21 @@ const SolutionSection: React.FC = () => {
           <SolutionStep
             icon={<Smartphone size={32} strokeWidth={1.5} />}
             title="1. RESERVA"
-            desc="Abre la app, selecciona hora y pista. En 3 clics tienes tu sesión asegurada."
+            desc="Abre la app, elige tu hora y tu pista. En 3 clics tienes la sesión asegurada. Además, accede a los vídeos de los drills antes de llegar a la pista para que cuando llegues, ya sepas exactamente qué hacer."
             image="/assets/app-reservation.png"
             delay="0s"
           />
           <SolutionStep
             icon={<QrCode size={32} strokeWidth={1.5} />}
             title="2. DESBLOQUEA"
-            desc="Escanea el QR en el locker. La puerta se abre automáticamente y la máquina está lista."
+            desc="Escanea el código QR en la taquilla a pie de pista. Se abre sola y la máquina junto con todo el equipo de entrenamiento están listos para ti."
             image="/assets/locker-system.png"
             delay="0.1s"
           />
           <SolutionStep
             icon={<Activity size={32} strokeWidth={1.5} />}
             title="3. ENTRENA"
-            desc="Llévatela a la pista, configura tu sesión y mejora tu técnica sin distracciones."
+            desc="Configura tu sesión y mejora tu técnica sin distracciones ni esperas. Cientos de repeticiones en una sola hora."
             image="/assets/hero-court.png" // Reusing hero court for 'Train' generic visual if action shot is used elsewhere
             delay="0.2s"
           />

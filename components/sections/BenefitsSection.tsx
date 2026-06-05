@@ -24,22 +24,22 @@ const BenefitsSection: React.FC = () => {
                             LOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-volea-green to-emerald-600">PROFESIONALES</span>.
                         </h2>
                         <p className="text-xl text-gray-300 font-light max-w-md">
-                            La diferencia entre un amateur y un pro no es el talento, es la cantidad de bolas que golpean fuera de partido.
+                            La diferencia entre un amateur y un pro no es el talento, son las horas de repetición fuera del partido.
                         </p>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4">
                         <BenefitItem title="MEJORA REAL">
-                            Automatiza tus golpes. Repite esa bandeja 100 veces seguidas hasta que salga sola.
+                            Dale caña a tus golpes. Repite esa bandeja 100 veces seguidas hasta que salga sola.
                         </BenefitItem>
                         <BenefitItem title="FRICCIÓN CERO">
-                            Tu tiempo vale oro. Úsalo para entrenar, no para reservar pistas ni coordinar con nadie.
+                            Tu tiempo vale oro. Úsalo para entrenar, no para coordinar con nadie.
                         </BenefitItem>
                         <BenefitItem title="A TU RITMO">
-                            Entrena solo, en silencio, cuando te va bien. Tu mejor terapia.
+                            Entrena solo o comparte la sesión con quien quieras. Mismo equipamiento, misma calidad, coste dividido entre todos.
                         </BenefitItem>
                         <BenefitItem title="ACCESO PREMIUM">
-                            Entrenamiento de élite por una fracción de lo que cuesta un profesor particular.
+                            Entrenamiento de élite sin depender de horarios ni de la disponibilidad de nadie.
                         </BenefitItem>
                     </div>
                 </div>

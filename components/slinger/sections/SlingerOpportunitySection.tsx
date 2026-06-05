@@ -14,7 +14,7 @@ const SlingerOpportunitySection: React.FC = () => {
             ¿Por qué <span className="text-volea-green">no mejoran</span> después de años jugando?
           </h2>
           <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl font-light leading-relaxed">
-            El 90% de los jugadores amateurs compite sin entrenar técnica. Las máquinas lanzapelotas son el "Coach" perfecto, pero hoy enfrentan barreras logísticas que frenan su progreso.
+            El 90% de los jugadores amateurs compite sin entrenar técnica. Las máquinas lanzapelotas son el coach perfecto, pero hoy enfrentan barreras logísticas que frenan su progreso.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ const SlingerOpportunitySection: React.FC = () => {
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">Coste de Volumen</h3>
             <p className="text-[#D1D5DB] font-light leading-relaxed mb-6">
-              Entrenar técnica hoy requiere pagar pista + honorarios de un coach. El entrenamiento autónomo es la única vía escalable y económica.
+              Entrenar técnica hoy requiere pagar pista más honorarios de un entrenador. El entrenamiento autónomo es la única vía escalable y económica.
             </p>
             <div className="text-white/40 text-[10px] font-black tracking-widest uppercase flex items-center gap-2">
               <span className="w-6 h-[1px] bg-white/10"></span> Ineficiencia Económica

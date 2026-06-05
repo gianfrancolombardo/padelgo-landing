@@ -27,26 +27,26 @@ const PascalHeroSection: React.FC = () => {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-display font-bold leading-none mb-8 animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white to-[#D1D5DB] drop-shadow-2xl">
-            EL ESTÁNDAR DEL <br className="hidden md:block" />
-            <span className="text-volea-green">"BOTE PERFECTO"</span>
+            LA PELOTA PERFECTA <br className="hidden md:block" />
+            <span className="text-volea-green">EN CADA SESIÓN</span>
           </h1>
 
           <p className="text-xl md:text-3xl text-[#D1D5DB] max-w-3xl mx-auto mb-14 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            Uniendo la red autónoma líder con la tecnología absoluta de presurización para democratizar el entrenamiento de élite.
+            Unimos la primera red de entrenamiento autónomo y sostenible con la mejor tecnología de presurización del mercado. Juntos estandarizamos la calidad del entrenamiento en España.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.6s' }}>
              <div className="flex flex-col items-center gap-3">
                 <span className="text-volea-green font-display text-4xl">100%</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Material Premium</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Material en óptimas condiciones</span>
              </div>
              <div className="flex flex-col items-center gap-3 border-x border-white/10">
-                <span className="text-white font-display text-4xl">0.0</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Residuos de Caucho</span>
+                <span className="text-white font-display text-4xl">0</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Residuos de caucho innecesarios</span>
              </div>
              <div className="flex flex-col items-center gap-3">
                 <span className="text-volea-green font-display text-4xl">24/7</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Escaparate Digital</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Escaparate activo en pista</span>
              </div>
           </div>
         </div>

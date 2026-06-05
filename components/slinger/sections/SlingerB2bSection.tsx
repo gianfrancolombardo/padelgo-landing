@@ -12,10 +12,10 @@ const SlingerB2bSection: React.FC = () => {
         <div className="text-center mb-24">
           <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">MÁS QUE UN ALQUILER</div>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-            Inteligencia de Mercado y Ventas
+            Inteligencia de mercado y ventas en tiempo real.
           </h2>
           <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            VoleaBox no solo muestra el producto Slinger a miles de jugadores diarios, lo vende dinámicamente y analiza su rendimiento con datos exactos de uso real.
+            VoleaBox no solo pone la Slinger delante de jugadores cualificados cada día, sino que analiza su rendimiento con datos exactos de uso real y activa la venta en el momento de mayor intención de compra.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ const SlingerB2bSection: React.FC = () => {
               <div>
                 <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">Venta en Caliente</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  El momento de mayor intención de compra es tras un gran entreno. Activamos <strong className="text-white font-normal">Push Notifications</strong> tácticas con ofertas exclusivas justo al terminar la sesión.
+                  El mejor momento para comprar una Slinger es justo después de un gran entreno con ella. Activamos notificaciones con ofertas exclusivas al terminar cada sesión.
                 </p>
               </div>
             </div>
@@ -47,7 +47,7 @@ const SlingerB2bSection: React.FC = () => {
               <div>
                 <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">Efecto Cashback</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  Derribamos la barrera del precio. Descontamos el total de alquileres acumulados del PVP final de la Slinger Bag. Un modelo de <strong className="text-white font-normal">"Try-and-Buy"</strong> sin fricción para el usuario.
+                  Derribamos la barrera del precio. Descontamos el total de alquileres acumulados del precio final de la Slinger Bag. Un modelo de prueba y compra sin fricción para el jugador.
                 </p>
               </div>
             </div>
@@ -61,9 +61,9 @@ const SlingerB2bSection: React.FC = () => {
                 <LineChart className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">Activos de Data</h3>
+                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">Datos Reales</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  Proporcionamos a Slinger <strong className="text-white font-normal">Dashboard de métricas exactas</strong>: horas de uso, perfiles sociodemográficos del jugador y feedback directo de funcionamiento.
+                  Proporcionamos a Slinger un panel de métricas exactas: horas de uso, perfil del jugador, golpes realizados y feedback directo de funcionamiento en campo.
                 </p>
               </div>
             </div>

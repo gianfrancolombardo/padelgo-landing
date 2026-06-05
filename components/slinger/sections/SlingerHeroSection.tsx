@@ -27,7 +27,7 @@ const SlingerHeroSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10 pt-20">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block border border-volea-green/30 bg-volea-green/5 text-volea-green px-5 py-2 rounded-full text-[10px] font-bold tracking-[0.3em] mb-10 animate-fade-in shadow-[0_0_15px_rgba(59,255,118,0.1)] uppercase">
-            Propuesta exclusiva para Slinger Team
+            Propuesta exclusiva para el equipo Slinger
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.9] mb-8 animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white to-[#D1D5DB] drop-shadow-2xl">
@@ -48,7 +48,7 @@ const SlingerHeroSection: React.FC = () => {
                href="#showroom" 
                className="bg-volea-green text-[#1A1D1A] px-10 py-5 rounded-full text-xs font-black tracking-[0.2em] hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(59,255,118,0.3)] w-full sm:w-auto text-center uppercase"
              >
-               Estrategia Alianza
+               Estrategia de Alianza
              </a>
              <a 
                href="#contacto" 

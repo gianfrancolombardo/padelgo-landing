@@ -6,20 +6,20 @@ const SlingerExperienceSection: React.FC = () => {
     {
       icon: <Smartphone className="w-7 h-7" />,
       number: "01",
-      title: "Reserva (App)",
-      description: "El jugador elige su pista y horario. La sesión de Slinger está asegurada en tan solo 3 clics desde su propio smartphone.",
+      title: "1. RESERVA",
+      description: "El jugador elige su pista y horario. La sesión está asegurada en 3 clics desde su móvil.",
     },
     {
       icon: <Unlock className="w-7 h-7" />,
       number: "02",
-      title: "Desbloquea (IoT)",
-      description: "Al llegar, escanea el QR a pie de pista. El locker se abre automáticamente. Sin trámites, colas ni intervención humana.",
+      title: "2. DESBLOQUEA",
+      description: "Al llegar, escanea el código QR a pie de pista. La taquilla se abre sola. Sin trámites, sin colas, sin intervención humana.",
     },
     {
       icon: <Activity className="w-7 h-7" />,
       number: "03",
-      title: "Entrena (Guiado)",
-      description: "Su Slinger está lista para usar. Puede seguir sesiones guiadas en la App para maximizar la eficacia de su técnica.",
+      title: "3. ENTRENA",
+      description: "La Slinger y el material de entrenamiento están listos para usar. El jugador puede seguir sesiones guiadas en la app para sacar el máximo partido a cada entrenamiento.",
     }
   ];
 
@@ -31,7 +31,7 @@ const SlingerExperienceSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10">
         
         <div className="text-center mb-24">
-          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">MISIÓN ZERO FRICCIÓN</div>
+          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">CERO FRICCIÓN</div>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
             De la App a la pista en segundos
           </h2>

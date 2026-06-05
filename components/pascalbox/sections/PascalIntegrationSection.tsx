@@ -11,30 +11,30 @@ const PascalIntegrationSection: React.FC = () => {
           <div className="flex-1 space-y-12 animate-fade-in">
              <div>
                 <div className="text-volea-green text-xs font-bold tracking-[0.3em] uppercase mb-4">Ingeniería Compartida</div>
-                <h2 className="text-4xl md:text-6xl font-display text-white mb-6">INTEGRACIÓN <br /> <span className="text-volea-green">NATIVA PRO</span></h2>
+                <h2 className="text-4xl md:text-6xl font-display text-white mb-6">CÓMO LO <span className="text-volea-green">INTEGRAMOS</span></h2>
                 <p className="text-[#D1D5DB] text-lg font-light leading-relaxed">
-                   Diseñamos el hardware de VoleaBox en torno a la precisión de Pascal Box. No es un accesorio; es el corazón de nuestra experiencia premium de entrenamiento.
+                   El Pascal Box PRO XL no es un accesorio en nuestra red. Es el corazón del servicio. Sin presurización, no hay experiencia premium.
                 </p>
              </div>
 
              <div className="space-y-8">
                 <div className="flex gap-6 items-start">
                    <div className="w-10 h-10 rounded-full bg-volea-green/10 flex items-center justify-center border border-volea-green/20 shrink-0 mt-1">
-                      <Settings className="w-5 h-5 text-volea-green" />
+                      <Zap className="w-5 h-5 text-volea-green" />
                    </div>
                    <div>
-                      <h4 className="text-xl font-display text-white mb-2">Monitorización IoT</h4>
-                      <p className="text-sm text-gray-400 font-light">Control remoto de presión y estado del sistema Pascal Box PRO directamente desde nuestro dashboard de flota.</p>
+                      <h4 className="text-xl font-display text-white mb-2">Represurización después de cada sesión</h4>
+                      <p className="text-sm text-gray-400 font-light">Tras cada entrenamiento, las pelotas se represionizan para que el siguiente jugador reciba siempre la pelota perfecta. La calidad no se negocia.</p>
                    </div>
                 </div>
 
                 <div className="flex gap-6 items-start">
                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shrink-0 mt-1">
-                      <Zap className="w-5 h-5 text-white" />
+                      <Shield className="w-5 h-5 text-white" />
                    </div>
                    <div>
-                      <h4 className="text-xl font-display text-white mb-2">Automatización de Ciclos</h4>
-                      <p className="text-sm text-gray-400 font-light">Ciclos de presurización automáticos entre alquileres para garantizar que el siguiente jugador reciba siempre el "Bote Perfecto".</p>
+                      <h4 className="text-xl font-display text-white mb-2">Certificado Pascal Box</h4>
+                      <p className="text-sm text-gray-400 font-light">Cada punto de la red VoleaBox lleva el sello de calidad Pascal Box visible en el hardware y en la app. Tu marca, asociada al entrenamiento de élite en los mejores clubes de España.</p>
                    </div>
                 </div>
              </div>

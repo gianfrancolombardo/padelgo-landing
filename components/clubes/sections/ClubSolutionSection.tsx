@@ -31,10 +31,10 @@ const ClubSolutionSection: React.FC = () => {
                 LA SOLUCIÓN VOLEABOX
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-wide mb-6">
-                ATRAIGA AL <span className="text-volea-green">JUGADOR INDIVIDUAL</span>
+                ATRAE AL <span className="text-volea-green">JUGADOR INDIVIDUAL</span>
               </h2>
               <p className="text-[#D1D5DB] text-lg font-light">
-                Instalamos un Hub autónomo a pie de pista. Sin obras, sin Wi-Fi y 100% gestionado por nosotros.
+                Una taquilla inteligente a pie de pista con material de entrenamiento premium. Tu club no hace nada. Nosotros nos encargamos de todo.
               </p>
             </div>
 
@@ -46,7 +46,7 @@ const ClubSolutionSection: React.FC = () => {
               <div>
                 <h3 className="text-xl font-display text-white mb-2">Servicio 360º Premium</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Lanzapelotas de última generación (Slinger) y presurización perfecta (Pascal Box) todo integrado. App con rutinas en vídeo para el jugador.
+                  Lanzapelotas de última generación (Slinger) y pelotas con presurización perfecta (Pascal Box) y material para entrenos, todo integrado. App con rutinas en vídeo para el jugador.
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const ClubSolutionSection: React.FC = () => {
               <div>
                 <h3 className="text-xl font-display text-white mb-2">Nuevos Ingresos</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Monetización directa e inmediata de franjas muertas. Transforme el 0% de ocupación atrayendo al jugador que no tiene pareja de nivel.
+                  Monetización directa e inmediata de franjas muertas. Transforma el 0% de ocupación atrayendo al jugador que no tiene pareja y está ansioso por mejorar.
                 </p>
               </div>
             </div>
@@ -70,9 +70,9 @@ const ClubSolutionSection: React.FC = () => {
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-display text-white mb-2">Posicionamiento Tecnológico</h3>
+                <h3 className="text-xl font-display text-white mb-2">Club Sostenible y Tecnológico</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Su club se moderniza instantáneamente entrando en el terreno <strong className="text-white">Green Club + Tech</strong>, liderando la innovación en la ciudad.
+                  Tu club se moderniza instantáneamente convirtiéndose en un referente sostenible y tecnológico de Barcelona, liderando la innovación en la ciudad. Tus socios lo notan. Los nuevos socios también.
                 </p>
               </div>
             </div>

@@ -4,23 +4,23 @@ import { CalendarClock, MapPin, Globe } from 'lucide-react';
 const SlingerRoadmapSection: React.FC = () => {
   const roadmap = [
     {
-      quarter: "Q1 2026",
-      title: "Fase Piloto Activa",
-      description: "Despliegue inicial y validación operativa en diversos clubes premium en Barcelona para optimizar la retención y recurrencia de usuarios.",
+      quarter: "Q3 2026",
+      title: "Fase Piloto",
+      description: "Despliegue inicial en clubes premium de Barcelona. Validación operativa y optimización de la experiencia de usuario.",
       icon: <CalendarClock className="w-5 h-5" />,
       status: "active"
     },
     {
-      quarter: "Q2 2026",
-      title: "Estandarización Exclusiva",
-      description: "Renovación unificada de la flota. Integración de la Slinger Bag como núcleo del equipamiento VoleaBox a exclusividad nacional.",
+      quarter: "Q4 2026",
+      title: "Exclusividad Nacional",
+      description: "Slinger Bag se convierte en el núcleo tecnológico exclusivo de toda la flota VoleaBox en España.",
       icon: <MapPin className="w-5 h-5" />,
       status: "upcoming"
     },
     {
-      quarter: "Q3 - Q4 2026",
+      quarter: "Q1 - Q3 2027",
       title: "Expansión Nacional",
-      description: "Despliegue masivo del ecosistema VoleaBox en los 100 mejores clubes de España, convirtiéndose en el showroom físico interactivo más potente del país.",
+      description: "Despliegue en los 100 mejores clubes de España. El showroom físico interactivo más potente del país.",
       icon: <Globe className="w-5 h-5" />,
       status: "future"
     }
