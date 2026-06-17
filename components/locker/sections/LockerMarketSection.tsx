@@ -1,25 +1,28 @@
 import React from 'react';
 import { TrendingUp, Users, MapPin } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const LockerMarketSection: React.FC = () => {
+  const { t } = useLanguage();
+
   const stats = [
     {
       icon: <MapPin className="w-6 h-6" />,
-      value: "20.000+",
-      label: "Pistas en España",
-      desc: "El mercado con mayor densidad de pistas de pádel del mundo."
+      value: t('locker.market.stat1Val'),
+      label: t('locker.market.stat1Label'),
+      desc: t('locker.market.stat1Desc')
     },
     {
       icon: <Users className="w-6 h-6" />,
-      value: "4M+",
-      label: "Jugadores Activos",
-      desc: "Una masa crítica que demanda soluciones de almacenamiento diarias."
+      value: t('locker.market.stat2Val'),
+      label: t('locker.market.stat2Label'),
+      desc: t('locker.market.stat2Desc')
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      value: "35%",
-      label: "Crecimiento de Alquiler",
-      desc: "Incremento anual en el uso de servicios autónomos en clubes."
+      value: t('locker.market.stat3Val'),
+      label: t('locker.market.stat3Label'),
+      desc: t('locker.market.stat3Desc')
     }
   ];
 
@@ -29,16 +32,16 @@ const LockerMarketSection: React.FC = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-32">
           <div>
-            <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">EL MERCADO DE LA OPORTUNIDAD</div>
+            <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('locker.market.badge')}</div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-              El Pádel: El mayor banco de pruebas para su <span className="text-volea-green">Hardware</span>
+              {t('locker.market.title')}<span className="text-volea-green">{t('locker.market.titleSpan')}</span>
             </h2>
             <p className="text-[#A1A1AA] text-lg font-light leading-relaxed mb-10">
-              VoleaBox ha identificado un cuello de botella logístico en los clubes más prestigiosos. Los jugadores necesitan un lugar seguro, inteligente y tecnificado donde interactuar con su equipamiento de élite.
+              {t('locker.market.desc')}
             </p>
             <div className="glass p-8 rounded-3xl border border-white/5 bg-gradient-to-br from-volea-green/5 to-transparent">
               <p className="text-white italic font-light text-lg">
-                "No buscamos un proveedor de metal, buscamos un socio de ingeniería que entienda el valor de la modularidad y la durabilidad en exterior."
+                {t('locker.market.quote')}
               </p>
             </div>
           </div>

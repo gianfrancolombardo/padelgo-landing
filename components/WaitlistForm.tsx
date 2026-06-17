@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Check, Loader2, AlertCircle } from 'lucide-react';
+import { useLanguage } from '../i18n/LanguageContext';
 
 interface WaitlistFormProps {
   buttonText: React.ReactNode;
@@ -7,6 +8,7 @@ interface WaitlistFormProps {
 }
 
 const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) => {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -30,15 +32,15 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
 
       if (result.success) {
         setStatus('success');
-        setMessage('¡Gracias! Estás dentro. Te avisaremos pronto.');
+        setMessage(t('waitlistForm.success'));
         setEmail('');
       } else {
         setStatus('error');
-        setMessage(result.message || 'Hubo un error al enviar.');
+        setMessage(result.message || t('waitlistForm.error'));
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Hubo un error. Inténtalo de nuevo.');
+      setMessage(t('waitlistForm.networkError'));
     }
   };
 
@@ -52,7 +54,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="tucorreo@ejemplo.com"
+          placeholder={t('waitlistForm.placeholder')}
           required
           disabled={status === 'submitting' || status === 'success'}
           className="flex-grow w-full px-6 py-4 text-base bg-white/5 text-white border border-white/10 rounded-full focus:ring-1 focus:ring-volea-green focus:border-volea-green focus:outline-none transition-all placeholder:text-gray-600 disabled:opacity-50 backdrop-blur-sm peer"
@@ -64,7 +66,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ buttonText, microCopy }) =>
           className="bg-volea-green text-volea-dark font-bold tracking-wide text-base px-8 py-4 rounded-full hover:bg-white hover:text-volea-dark transition-all transform hover:scale-105 flex items-center justify-center gap-2 group disabled:bg-gray-800 disabled:text-gray-500 disabled:scale-100 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(59,255,118,0.2)] hover:shadow-[0_0_30px_rgba(59,255,118,0.4)] whitespace-nowrap"
         >
           <span>
-            {status === 'submitting' ? 'Enviando' : buttonText}
+            {status === 'submitting' ? t('waitlistForm.submitting') : buttonText}
           </span>
           {status === 'submitting' ? (
             <Loader2 className="animate-spin" size={20} />

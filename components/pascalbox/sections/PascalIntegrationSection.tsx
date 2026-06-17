@@ -1,7 +1,10 @@
 import React from 'react';
 import { Settings, Zap, Shield } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const PascalIntegrationSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="integracion" className="py-24 bg-[#020202] relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6">
@@ -10,10 +13,10 @@ const PascalIntegrationSection: React.FC = () => {
           
           <div className="flex-1 space-y-12 animate-fade-in">
              <div>
-                <div className="text-volea-green text-xs font-bold tracking-[0.3em] uppercase mb-4">Ingeniería Compartida</div>
-                <h2 className="text-4xl md:text-6xl font-display text-white mb-6">CÓMO LO <span className="text-volea-green">INTEGRAMOS</span></h2>
+                <div className="text-volea-green text-xs font-bold tracking-[0.3em] uppercase mb-4">{t('pascal.integration.badge')}</div>
+                <h2 className="text-4xl md:text-6xl font-display text-white mb-6">{t('pascal.integration.title')}<span className="text-volea-green">{t('pascal.integration.titleSpan')}</span></h2>
                 <p className="text-[#D1D5DB] text-lg font-light leading-relaxed">
-                   El Pascal Box PRO XL no es un accesorio en nuestra red. Es el corazón del servicio. Sin presurización, no hay experiencia premium.
+                   {t('pascal.integration.desc')}
                 </p>
              </div>
 
@@ -23,8 +26,8 @@ const PascalIntegrationSection: React.FC = () => {
                       <Zap className="w-5 h-5 text-volea-green" />
                    </div>
                    <div>
-                      <h4 className="text-xl font-display text-white mb-2">Represurización después de cada sesión</h4>
-                      <p className="text-sm text-gray-400 font-light">Tras cada entrenamiento, las pelotas se represionizan para que el siguiente jugador reciba siempre la pelota perfecta. La calidad no se negocia.</p>
+                      <h4 className="text-xl font-display text-white mb-2">{t('pascal.integration.card1Title')}</h4>
+                      <p className="text-sm text-gray-400 font-light">{t('pascal.integration.card1Desc')}</p>
                    </div>
                 </div>
 
@@ -33,8 +36,8 @@ const PascalIntegrationSection: React.FC = () => {
                       <Shield className="w-5 h-5 text-white" />
                    </div>
                    <div>
-                      <h4 className="text-xl font-display text-white mb-2">Certificado Pascal Box</h4>
-                      <p className="text-sm text-gray-400 font-light">Cada punto de la red VoleaBox lleva el sello de calidad Pascal Box visible en el hardware y en la app. Tu marca, asociada al entrenamiento de élite en los mejores clubes de España.</p>
+                      <h4 className="text-xl font-display text-white mb-2">{t('pascal.integration.card2Title')}</h4>
+                      <p className="text-sm text-gray-400 font-light">{t('pascal.integration.card2Desc')}</p>
                    </div>
                 </div>
              </div>
@@ -51,8 +54,8 @@ const PascalIntegrationSection: React.FC = () => {
                 
                 <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
                    <div className="glass p-4 rounded-2xl border border-white/10">
-                      <span className="block text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-bold">Standard de Calidad</span>
-                      <span className="text-white font-display text-xl tracking-wider">CERTIFICADO PASCAL BOX</span>
+                      <span className="block text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-bold">{t('pascal.integration.labelStandard')}</span>
+                      <span className="text-white font-display text-xl tracking-wider">{t('pascal.integration.certified')}</span>
                    </div>
                    <div className="w-12 h-12 rounded-full bg-volea-green flex items-center justify-center shadow-[0_0_20px_rgba(59,255,118,0.5)]">
                       <Shield className="w-6 h-6 text-black" />
@@ -63,7 +66,7 @@ const PascalIntegrationSection: React.FC = () => {
              {/* Decorative labels */}
              <div className="absolute -top-6 -right-6 glass p-4 rounded-2xl border border-white/10 animate-float">
                 <img src="/assets/pascal-detail.png" className="w-24 h-24 object-cover rounded-lg mb-2" />
-                <span className="text-[8px] text-volea-green font-bold uppercase tracking-widest">Detalle: Pascal Box PRO</span>
+                <span className="text-[8px] text-volea-green font-bold uppercase tracking-widest">{t('pascal.integration.detail')}</span>
              </div>
           </div>
 

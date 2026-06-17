@@ -1,7 +1,10 @@
 import React from 'react';
 import WaitlistForm from '../WaitlistForm';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const HeroSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -18,19 +21,19 @@ const HeroSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-6 relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-none mb-8 animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white to-white/60 drop-shadow-2xl">
-            TU TÉCNICA <br />
-            <span className="text-volea-green">NO MEJORA</span> JUGANDO
+            {t('hero.title')} <br />
+            <span className="text-volea-green">{t('hero.titleSpan')}</span>{t('hero.titleEnd')}
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            La primera red de entrenamiento autónomo y sostenible para pádel y tenis.
-            <br className="hidden md:block" />Abre la app y entrena como un pro.
+            {t('hero.subtitle')}
+            <br className="hidden md:block" />{t('hero.subtitleBr')}
           </p>
 
           <div className="animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <WaitlistForm
-              buttonText={<>ÚNETE A LA REVOLUCIÓN</>}
-              microCopy="Plazas limitadas para los primeros jugadores en Barcelona."
+              buttonText={t('hero.cta')}
+              microCopy={t('hero.microcopy')}
             />
           </div>
         </div>

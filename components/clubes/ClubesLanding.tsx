@@ -7,13 +7,19 @@ import ClubSolutionSection from './sections/ClubSolutionSection';
 import ClubOperativaSection from './sections/ClubOperativaSection';
 import ClubModelSection from './sections/ClubModelSection';
 import ClubCtaSection from './sections/ClubCtaSection';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const ClubesLanding: React.FC = () => {
-  // Ensure we start at the top
+  const { t } = useLanguage();
+
+  // Ensure we start at the top and update title dynamically
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "VoleaBox | Rentabilidad y Automatización para Clubes de Pádel";
   }, []);
+
+  useEffect(() => {
+    document.title = t('clubs.title');
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-[#020202] text-[#FAFAFA] overflow-x-hidden">

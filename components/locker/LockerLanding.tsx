@@ -7,12 +7,18 @@ import LockerTechSection from './sections/LockerTechSection';
 import LockerSoftwareSection from './sections/LockerSoftwareSection';
 import LockerVolumeSection from './sections/LockerVolumeSection';
 import LockerCtaSection from './sections/LockerCtaSection';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const LockerLanding: React.FC = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "VoleaBox | Partnership Estratégica para Smart Lockers";
   }, []);
+
+  useEffect(() => {
+    document.title = t('locker.title');
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-volea-green selection:text-black">

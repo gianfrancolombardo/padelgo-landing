@@ -1,14 +1,14 @@
 import React from 'react';
 import { Smartphone, Zap, Leaf } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const ClubSolutionSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="solucion" className="py-24 bg-[#020202] relative border-b border-white/5">
       <div className="max-w-[1440px] mx-auto px-6">
-        
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          
-          {/* Photorealistic Image Container */}
           <div className="relative rounded-[2rem] overflow-hidden group shadow-2xl shadow-volea-green/5 animate-fade-in border border-white/10">
             <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/20 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-[#020202]/40 via-transparent to-transparent z-10 pointer-events-none"></div>
@@ -19,64 +19,59 @@ const ClubSolutionSection: React.FC = () => {
             />
             <div className="absolute bottom-8 left-8 z-20">
               <div className="inline-block border border-volea-green/30 bg-black/60 backdrop-blur-md text-volea-green px-4 py-2 rounded-full text-xs font-bold tracking-[0.2em] shadow-lg">
-                PREMIUM INDOOR HUB
+                {t('clubs.solution.hub')}
               </div>
             </div>
           </div>
 
-          {/* Text and Cards */}
           <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <div className="mb-10">
               <div className="inline-block border border-volea-green/30 bg-volea-green/5 text-volea-green px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em] mb-4">
-                LA SOLUCIÓN VOLEABOX
+                {t('clubs.solution.badge')}
               </div>
               <h2 className="text-4xl md:text-5xl font-display font-bold text-white tracking-wide mb-6">
-                ATRAE AL <span className="text-volea-green">JUGADOR INDIVIDUAL</span>
+                {t('clubs.solution.title')}<span className="text-volea-green">{t('clubs.solution.titleSpan')}</span>
               </h2>
               <p className="text-[#D1D5DB] text-lg font-light">
-                Una taquilla inteligente a pie de pista con material de entrenamiento premium. Tu club no hace nada. Nosotros nos encargamos de todo.
+                {t('clubs.solution.desc')}
               </p>
             </div>
 
-            {/* Card 1 */}
             <div className="glass-card p-6 rounded-3xl hover:bg-white/5 transition-all duration-300 group flex gap-6 items-start">
               <div className="w-12 h-12 rounded-full bg-volea-green/10 flex items-center justify-center shrink-0 border border-volea-green/20 group-hover:scale-110 transition-transform">
                 <Smartphone className="w-6 h-6 text-volea-green" />
               </div>
               <div>
-                <h3 className="text-xl font-display text-white mb-2">Servicio 360º Premium</h3>
+                <h3 className="text-xl font-display text-white mb-2">{t('clubs.solution.card1Title')}</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Lanzapelotas de última generación (Slinger) y pelotas con presurización perfecta (Pascal Box) y material para entrenos, todo integrado. App con rutinas en vídeo para el jugador.
+                  {t('clubs.solution.card1Desc')}
                 </p>
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="glass-card p-6 rounded-3xl hover:bg-white/5 transition-all duration-300 group flex gap-6 items-start">
               <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-display text-white mb-2">Nuevos Ingresos</h3>
+                <h3 className="text-xl font-display text-white mb-2">{t('clubs.solution.card2Title')}</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Monetización directa e inmediata de franjas muertas. Transforma el 0% de ocupación atrayendo al jugador que no tiene pareja y está ansioso por mejorar.
+                  {t('clubs.solution.card2Desc')}
                 </p>
               </div>
             </div>
 
-            {/* Card 3 */}
             <div className="glass-card p-6 rounded-3xl hover:bg-white/5 transition-all duration-300 group flex gap-6 items-start">
               <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10 group-hover:scale-110 transition-transform">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-display text-white mb-2">Club Sostenible y Tecnológico</h3>
+                <h3 className="text-xl font-display text-white mb-2">{t('clubs.solution.card3Title')}</h3>
                 <p className="text-sm text-[#D1D5DB] font-light leading-relaxed">
-                  Tu club se moderniza instantáneamente convirtiéndose en un referente sostenible y tecnológico de Barcelona, liderando la innovación en la ciudad. Tus socios lo notan. Los nuevos socios también.
+                  {t('clubs.solution.card3Desc')}
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </div>

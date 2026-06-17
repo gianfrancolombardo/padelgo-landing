@@ -1,7 +1,10 @@
 import React from 'react';
 import WaitlistForm from '../WaitlistForm';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const CtaSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative py-32 text-center overflow-hidden">
       {/* Dynamic Background */}
@@ -10,17 +13,16 @@ const CtaSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-6xl md:text-8xl font-display font-bold leading-none mb-8">
-            EL PÁDEL ESTÁ EVOLUCIONANDO. <br />
-            <span className="text-volea-green">¿Y TÚ?</span>
+            {t('cta.title')} <br />
+            <span className="text-volea-green">{t('cta.titleGreen')}</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-12 font-light tracking-wide">
-            Estamos cerrando acuerdos con los primeros clubes de Barcelona. <br />
-            Apúntate y sé el primero en probar la experiencia VoleaBox.
+            {t('cta.desc')}
           </p>
 
           <WaitlistForm
-            buttonText="QUIERO MEJORAR YA"
-            microCopy="Acceso prioritario para los primeros inscritos."
+            buttonText={t('cta.btn')}
+            microCopy={t('cta.microcopy')}
           />
         </div>
       </div>

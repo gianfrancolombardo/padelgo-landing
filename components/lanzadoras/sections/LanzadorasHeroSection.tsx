@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerHeroSection: React.FC = () => {
+const LanzadorasHeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
@@ -10,7 +10,7 @@ const SlingerHeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/assets/slinger_locker_hero.png"
-          alt="SlingerBag Locker Automático"
+          alt="Locker Automático para Lanzadora de Pelotas"
           className="w-full h-full object-cover opacity-60 animate-ken-burns grayscale"
           onError={(e) => {
              (e.target as HTMLImageElement).style.display = 'none';
@@ -29,20 +29,20 @@ const SlingerHeroSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10 pt-20">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-block border border-volea-green/30 bg-volea-green/5 text-volea-green px-5 py-2 rounded-full text-[10px] font-bold tracking-[0.3em] mb-10 animate-fade-in shadow-[0_0_15px_rgba(59,255,118,0.1)] uppercase">
-            {t('slinger.hero.alliance')}
+            {t('lanzadoras.hero.alliance')}
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-[0.9] mb-8 animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white to-[#D1D5DB] drop-shadow-2xl">
-            {t('slinger.hero.titlePre')} <br className="hidden md:block" />
+            {t('lanzadoras.hero.titlePre')} <br className="hidden md:block" />
             <span className="text-volea-green relative inline-block">
-              {t('slinger.hero.titleSpan')}
+              {t('lanzadoras.hero.titleSpan')}
               <span className="absolute -inset-4 bg-volea-green/10 blur-3xl -z-10 rounded-full"></span>
             </span> <br className="hidden md:block" />
-            {t('slinger.hero.titleEnd')}
+            {t('lanzadoras.hero.titleEnd')}
           </h1>
 
           <p className="text-lg md:text-2xl text-[#D1D5DB] max-w-3xl mx-auto mb-14 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            {t('slinger.hero.subtitle')}<strong className="text-white font-normal">{t('slinger.hero.subtitleBold')}</strong>{t('slinger.hero.subtitleEnd')}
+            {t('lanzadoras.hero.subtitle')}<strong className="text-white font-normal">{t('lanzadoras.hero.subtitleBrand')}</strong>{t('lanzadoras.hero.subtitleEnd')}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-slide-up" style={{ animationDelay: '0.6s' }}>
@@ -50,13 +50,13 @@ const SlingerHeroSection: React.FC = () => {
                href="#showroom" 
                className="bg-volea-green text-[#1A1D1A] px-10 py-5 rounded-full text-xs font-black tracking-[0.2em] hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(59,255,118,0.3)] w-full sm:w-auto text-center uppercase"
              >
-               {t('slinger.hero.btnAlliance')}
+               {t('lanzadoras.hero.btnValue')}
              </a>
              <a 
                href="#contacto" 
                className="glass px-10 py-5 rounded-full text-xs font-bold tracking-[0.2em] hover:bg-white/10 transition-all duration-300 border border-white/10 w-full sm:w-auto text-center text-white uppercase"
              >
-               {t('slinger.hero.btnContact')}
+               {t('lanzadoras.hero.btnContact')}
              </a>
           </div>
         </div>
@@ -69,4 +69,4 @@ const SlingerHeroSection: React.FC = () => {
   );
 };
 
-export default SlingerHeroSection;
+export default LanzadorasHeroSection;

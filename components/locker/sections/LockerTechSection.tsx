@@ -1,7 +1,10 @@
 import React from 'react';
 import { Package, ShieldCheck, Layers, Settings2 } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const LockerTechSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="py-32 bg-[#050505] relative overflow-hidden" id="hardware">
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10">
@@ -20,7 +23,7 @@ const LockerTechSection: React.FC = () => {
                 <div className="absolute bottom-10 left-10 right-10 flex justify-between items-end">
                   <div className="glass p-4 rounded-2xl border border-white/10">
                     <span className="block text-[8px] text-volea-green font-bold uppercase tracking-widest mb-1">Eng. Spec v4</span>
-                    <span className="text-white font-display text-xl tracking-wider">RESISTENCIA CLASE C5</span>
+                    <span className="text-white font-display text-xl tracking-wider">{t('locker.tech.resistence')}</span>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                     <Settings2 className="w-5 h-5 text-white/50" />
@@ -31,12 +34,12 @@ const LockerTechSection: React.FC = () => {
 
           <div className="flex-1 order-1 lg:order-2 space-y-12">
             <div>
-              <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">ESPECIFICACIONES INDUSTRIALES</div>
+              <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('locker.tech.badge')}</div>
               <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-                Construido para la <span className="text-volea-green">Exigencia Real</span>
+                {t('locker.tech.title')}<span className="text-volea-green">{t('locker.tech.titleSpan')}</span>
               </h2>
               <p className="text-[#A1A1AA] text-lg font-light leading-relaxed">
-                Nuestros lockers operan en entornos outdoor semi-protegidos. Buscamos una arquitectura que combine la estética "Tech-Premium" con una durabilidad extrema.
+                {t('locker.tech.desc')}
               </p>
             </div>
 
@@ -45,24 +48,24 @@ const LockerTechSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-volea-green">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h4 className="text-xl font-bold text-white tracking-wide">Tratamiento Anticorrosivo</h4>
-                <p className="text-gray-500 text-sm font-light">Acabados certificados para resistir humedad y exposición directa sin degradación estética.</p>
+                <h4 className="text-xl font-bold text-white tracking-wide">{t('locker.tech.card1Title')}</h4>
+                <p className="text-gray-500 text-sm font-light">{t('locker.tech.card1Desc')}</p>
               </div>
 
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-volea-green">
                   <Layers className="w-6 h-6" />
                 </div>
-                <h4 className="text-xl font-bold text-white tracking-wide">Modularidad Plug&Play</h4>
-                <p className="text-gray-500 text-sm font-light">Estructura escalable que permite ampliar unidades según la demanda del club.</p>
+                <h4 className="text-xl font-bold text-white tracking-wide">{t('locker.tech.card2Title')}</h4>
+                <p className="text-gray-500 text-sm font-light">{t('locker.tech.card2Desc')}</p>
               </div>
 
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white">
                   <Package className="w-6 h-6" />
                 </div>
-                <h4 className="text-xl font-bold text-white tracking-wide">Electrónica Invisible</h4>
-                <p className="text-gray-500 text-sm font-light">Integración limpia de cerraduras electrónicas y cableado interno para mantenimiento zero.</p>
+                <h4 className="text-xl font-bold text-white tracking-wide">{t('locker.tech.card3Title')}</h4>
+                <p className="text-gray-500 text-sm font-light">{t('locker.tech.card3Desc')}</p>
               </div>
             </div>
           </div>

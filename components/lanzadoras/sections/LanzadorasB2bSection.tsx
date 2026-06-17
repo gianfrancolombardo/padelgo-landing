@@ -2,7 +2,7 @@ import React from 'react';
 import { LineChart, SmartphoneNfc, Wallet } from 'lucide-react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerB2bSection: React.FC = () => {
+const LanzadorasB2bSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
@@ -13,12 +13,12 @@ const SlingerB2bSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10">
         
         <div className="text-center mb-24">
-          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('slinger.b2b.badge')}</div>
+          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('lanzadoras.b2b.badge')}</div>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-            {t('slinger.b2b.title')}
+            {t('lanzadoras.b2b.title')}
           </h2>
           <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            {t('slinger.b2b.desc')}
+            {t('lanzadoras.b2b.desc')}
           </p>
         </div>
 
@@ -32,9 +32,9 @@ const SlingerB2bSection: React.FC = () => {
                 <SmartphoneNfc className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('slinger.b2b.card1Title')}</h3>
+                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('lanzadoras.b2b.card1Title')}</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  {t('slinger.b2b.card1Desc')}
+                  {t('lanzadoras.b2b.card1Desc')}
                 </p>
               </div>
             </div>
@@ -48,9 +48,9 @@ const SlingerB2bSection: React.FC = () => {
                 <Wallet className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('slinger.b2b.card2Title')}</h3>
+                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('lanzadoras.b2b.card2Title')}</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  {t('slinger.b2b.card2Desc')}
+                  {t('lanzadoras.b2b.card2Desc')}
                 </p>
               </div>
             </div>
@@ -64,9 +64,9 @@ const SlingerB2bSection: React.FC = () => {
                 <LineChart className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('slinger.b2b.card3Title')}</h3>
+                <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-volea-green transition-colors">{t('lanzadoras.b2b.card3Title')}</h3>
                 <p className="text-[#A1A1AA] font-light leading-relaxed text-lg">
-                  {t('slinger.b2b.card3Desc')}
+                  {t('lanzadoras.b2b.card3Desc')}
                 </p>
               </div>
             </div>
@@ -79,4 +79,4 @@ const SlingerB2bSection: React.FC = () => {
   );
 };
 
-export default SlingerB2bSection;
+export default LanzadorasB2bSection;

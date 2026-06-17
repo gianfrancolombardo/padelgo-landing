@@ -1,8 +1,8 @@
 import React from 'react';
-import { Mail, Phone, ArrowRight } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerCtaSection: React.FC = () => {
+const LanzadorasCtaSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
@@ -15,16 +15,16 @@ const SlingerCtaSection: React.FC = () => {
           
           <div className="mb-4">
             <span className="inline-block border border-volea-green/30 bg-volea-green/5 text-volea-green px-4 py-1 rounded-full text-xs font-bold tracking-[0.2em]">
-              {t('slinger.cta.badge')}
+              {t('lanzadoras.cta.badge')}
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white max-w-3xl mb-6">
-            {t('slinger.cta.title')}
+            {t('lanzadoras.cta.title')}
           </h2>
 
           <p className="text-[#A1A1AA] text-lg max-w-2xl font-light mb-12">
-            {t('slinger.cta.desc')}
+            {t('lanzadoras.cta.desc')}
           </p>
 
           <div className="flex flex-col md:flex-row gap-6 items-center justify-center max-w-2xl w-full">
@@ -50,7 +50,7 @@ const SlingerCtaSection: React.FC = () => {
           </div>
 
           <div className="mt-12 text-[#A1A1AA] font-light text-sm flex items-center gap-2">
-            <span>{t('slinger.cta.carlos')}</span>
+            <span>{t('lanzadoras.cta.carlos')}</span> | <span>{t('lanzadoras.cta.location')}</span>
           </div>
 
         </div>
@@ -59,4 +59,4 @@ const SlingerCtaSection: React.FC = () => {
   );
 };
 
-export default SlingerCtaSection;
+export default LanzadorasCtaSection;

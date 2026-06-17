@@ -6,12 +6,18 @@ import PascalValueSection from './sections/PascalValueSection';
 import PascalIntegrationSection from './sections/PascalIntegrationSection';
 import PascalBusinessSection from './sections/PascalBusinessSection';
 import PascalCtaSection from './sections/PascalCtaSection';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const PascalBoxLanding: React.FC = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "VoleaBox x Pascal Box | Alianza en Mantenimiento de Pelotas";
   }, []);
+
+  useEffect(() => {
+    document.title = t('pascal.title');
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-[#020202] text-[#FAFAFA] overflow-x-hidden">

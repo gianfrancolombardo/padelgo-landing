@@ -2,7 +2,7 @@ import React from 'react';
 import { Eye, CheckCircle2, ShieldCheck, Zap, Activity } from 'lucide-react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerPartnershipSection: React.FC = () => {
+const LanzadorasPartnershipSection: React.FC = () => {
   const { t } = useLanguage();
 
   return (
@@ -20,8 +20,8 @@ const SlingerPartnershipSection: React.FC = () => {
             <div className="relative rounded-[2.5rem] overflow-hidden glass p-3 border border-white/10 shadow-2xl">
               <img 
                 src="/assets/slinger_locker_court.png" 
-                alt="SlingerBag Locker in Padel Court" 
-                className="w-full aspect-[4/5] object-cover rounded-[2rem] transition-all duration-1000 scale-105 group-hover:scale-100"
+                alt="Locker de Lanzadora de Pelotas en Pista" 
+                className="w-full aspect-[4/5] object-cover rounded-[2rem] transition-all duration-1000 scale-105 group-hover:scale-100 grayscale"
               />
               
               {/* Internal Overlay elements */}
@@ -29,8 +29,8 @@ const SlingerPartnershipSection: React.FC = () => {
               
               <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end">
                 <div className="glass p-5 rounded-2xl border border-white/10 backdrop-blur-md animate-slide-up">
-                  <span className="block text-[9px] text-volea-green font-black uppercase tracking-[0.2em] mb-1">{t('slinger.partnership.standard')}</span>
-                  <span className="text-white font-display text-xl tracking-wider">{t('slinger.partnership.hub')}</span>
+                  <span className="block text-[9px] text-volea-green font-black uppercase tracking-[0.2em] mb-1">{t('lanzadoras.partnership.nodeStatus')}</span>
+                  <span className="text-white font-display text-xl tracking-wider">{t('lanzadoras.partnership.hub')}</span>
                 </div>
                 <div className="w-14 h-14 rounded-full bg-volea-green flex items-center justify-center shadow-[0_0_30px_rgba(59,255,118,0.4)] animate-pulse-slow">
                   <Zap className="w-7 h-7 text-black" />
@@ -45,8 +45,8 @@ const SlingerPartnershipSection: React.FC = () => {
                     <Activity className="w-5 h-5 text-volea-green" />
                   </div>
                   <div>
-                    <span className="block text-[8px] text-gray-500 font-bold uppercase tracking-widest">{t('slinger.partnership.iotStatus')}</span>
-                    <span className="text-white font-bold text-xs uppercase tracking-tight">{t('slinger.partnership.iotNode')}</span>
+                    <span className="block text-[8px] text-gray-500 font-bold uppercase tracking-widest">{t('lanzadoras.partnership.iotStatus')}</span>
+                    <span className="text-white font-bold text-xs uppercase tracking-tight">{t('lanzadoras.partnership.iotNode')}</span>
                   </div>
                </div>
                <div className="flex gap-1 h-1 w-full bg-white/5 rounded-full overflow-hidden">
@@ -57,18 +57,18 @@ const SlingerPartnershipSection: React.FC = () => {
             <div className="absolute -bottom-6 -left-6 hidden md:block glass-card py-3 px-5 rounded-full border border-volea-green/20 animate-float shadow-xl z-20" style={{ animationDelay: '1s' }}>
                 <span className="text-[9px] text-volea-green font-black uppercase tracking-widest flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-volea-green animate-pulse"></span>
-                  {t('slinger.partnership.ready')}
+                  {t('lanzadoras.partnership.ready')}
                 </span>
             </div>
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="text-volea-green text-sm font-bold tracking-[0.3em] mb-4 uppercase">{t('slinger.partnership.badge')}</div>
+            <div className="text-volea-green text-sm font-bold tracking-[0.3em] mb-4 uppercase">{t('lanzadoras.partnership.badge')}</div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-              {t('slinger.partnership.title')}<span className="text-volea-green">{t('slinger.partnership.titleSpan')}</span>
+              {t('lanzadoras.partnership.title')}<span className="text-volea-green">{t('lanzadoras.partnership.titleSpan')}</span>
             </h2>
             <p className="text-[#A1A1AA] text-lg md:text-xl mb-12 font-light leading-relaxed">
-              {t('slinger.partnership.desc')}
+              {t('lanzadoras.partnership.desc')}
             </p>
 
             <div className="space-y-10">
@@ -77,8 +77,8 @@ const SlingerPartnershipSection: React.FC = () => {
                   <Eye className="w-7 h-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2">{t('slinger.partnership.card1Title')}</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('slinger.partnership.card1Desc')}</p>
+                  <h4 className="text-2xl font-bold text-white mb-2">{t('lanzadoras.partnership.card1Title')}</h4>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('lanzadoras.partnership.card1Desc')}</p>
                 </div>
               </div>
 
@@ -87,8 +87,8 @@ const SlingerPartnershipSection: React.FC = () => {
                   <CheckCircle2 className="w-7 h-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2">{t('slinger.partnership.card2Title')}</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('slinger.partnership.card2Desc')}</p>
+                  <h4 className="text-2xl font-bold text-white mb-2">{t('lanzadoras.partnership.card2Title')}</h4>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('lanzadoras.partnership.card2Desc')}</p>
                 </div>
               </div>
 
@@ -97,8 +97,8 @@ const SlingerPartnershipSection: React.FC = () => {
                   <ShieldCheck className="w-7 h-7" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white mb-2">{t('slinger.partnership.card3Title')}</h4>
-                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('slinger.partnership.card3Desc')}</p>
+                  <h4 className="text-2xl font-bold text-white mb-2">{t('lanzadoras.partnership.card3Title')}</h4>
+                  <p className="text-[#A1A1AA] font-light leading-relaxed">{t('lanzadoras.partnership.card3Desc')}</p>
                 </div>
               </div>
             </div>
@@ -110,4 +110,4 @@ const SlingerPartnershipSection: React.FC = () => {
   );
 };
 
-export default SlingerPartnershipSection;
+export default LanzadorasPartnershipSection;

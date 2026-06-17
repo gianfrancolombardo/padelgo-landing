@@ -1,7 +1,9 @@
 import React from 'react';
-import { ShieldCheck } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const PascalHeroSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020202]">
       {/* Background Image with Overlay */}
@@ -23,30 +25,30 @@ const PascalHeroSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10 pt-20">
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 border border-volea-green/30 bg-volea-green/5 text-volea-green px-6 py-2 rounded-full text-sm font-bold tracking-[0.3em] mb-10 animate-fade-in uppercase">
-             ALIANZA ESTRATÉGICA: VOLEABOX x PASCAL BOX
+             {t('pascal.hero.alliance')}
           </div>
           
           <h1 className="text-5xl md:text-8xl font-display font-bold leading-none mb-8 animate-slide-up text-transparent bg-clip-text bg-gradient-to-b from-white to-[#D1D5DB] drop-shadow-2xl">
-            LA PELOTA PERFECTA <br className="hidden md:block" />
-            <span className="text-volea-green">EN CADA SESIÓN</span>
+            {t('pascal.hero.title')} <br className="hidden md:block" />
+            <span className="text-volea-green">{t('pascal.hero.titleSpan')}</span>
           </h1>
 
           <p className="text-xl md:text-3xl text-[#D1D5DB] max-w-3xl mx-auto mb-14 font-light tracking-wide animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            Unimos la primera red de entrenamiento autónomo y sostenible con la mejor tecnología de presurización del mercado. Juntos estandarizamos la calidad del entrenamiento en España.
+            {t('pascal.hero.subtitle')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.6s' }}>
              <div className="flex flex-col items-center gap-3">
-                <span className="text-volea-green font-display text-4xl">100%</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Material en óptimas condiciones</span>
+                <span className="text-volea-green font-display text-4xl">{t('pascal.hero.stat1Val')}</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">{t('pascal.hero.stat1Label')}</span>
              </div>
              <div className="flex flex-col items-center gap-3 border-x border-white/10">
-                <span className="text-white font-display text-4xl">0</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Residuos de caucho innecesarios</span>
+                <span className="text-white font-display text-4xl">{t('pascal.hero.stat2Val')}</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">{t('pascal.hero.stat2Label')}</span>
              </div>
              <div className="flex flex-col items-center gap-3">
-                <span className="text-volea-green font-display text-4xl">24/7</span>
-                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">Escaparate activo en pista</span>
+                <span className="text-volea-green font-display text-4xl">{t('pascal.hero.stat3Val')}</span>
+                <span className="text-xs tracking-widest text-gray-500 font-bold uppercase">{t('pascal.hero.stat3Label')}</span>
              </div>
           </div>
         </div>

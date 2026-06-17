@@ -2,28 +2,28 @@ import React from 'react';
 import { CalendarClock, MapPin, Globe } from 'lucide-react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerRoadmapSection: React.FC = () => {
+const LanzadorasRoadmapSection: React.FC = () => {
   const { t } = useLanguage();
 
   const roadmap = [
     {
-      quarter: t('slinger.roadmap.phase1Quarter'),
-      title: t('slinger.roadmap.phase1Title'),
-      description: t('slinger.roadmap.phase1Desc'),
+      quarter: t('lanzadoras.roadmap.phase1Quarter'),
+      title: t('lanzadoras.roadmap.phase1Title'),
+      description: t('lanzadoras.roadmap.phase1Desc'),
       icon: <CalendarClock className="w-5 h-5" />,
       status: "active"
     },
     {
-      quarter: t('slinger.roadmap.phase2Quarter'),
-      title: t('slinger.roadmap.phase2Title'),
-      description: t('slinger.roadmap.phase2Desc'),
+      quarter: t('lanzadoras.roadmap.phase2Quarter'),
+      title: t('lanzadoras.roadmap.phase2Title'),
+      description: t('lanzadoras.roadmap.phase2Desc'),
       icon: <MapPin className="w-5 h-5" />,
       status: "upcoming"
     },
     {
-      quarter: t('slinger.roadmap.phase3Quarter'),
-      title: t('slinger.roadmap.phase3Title'),
-      description: t('slinger.roadmap.phase3Desc'),
+      quarter: t('lanzadoras.roadmap.phase3Quarter'),
+      title: t('lanzadoras.roadmap.phase3Title'),
+      description: t('lanzadoras.roadmap.phase3Desc'),
       icon: <Globe className="w-5 h-5" />,
       status: "future"
     }
@@ -34,12 +34,12 @@ const SlingerRoadmapSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10">
         
         <div className="text-center mb-24">
-          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('slinger.roadmap.badge')}</div>
+          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('lanzadoras.roadmap.badge')}</div>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-            {t('slinger.roadmap.title')}
+            {t('lanzadoras.roadmap.title')}
           </h2>
           <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            {t('slinger.roadmap.desc')}
+            {t('lanzadoras.roadmap.desc')}
           </p>
         </div>
 
@@ -88,4 +88,4 @@ const SlingerRoadmapSection: React.FC = () => {
   );
 };
 
-export default SlingerRoadmapSection;
+export default LanzadorasRoadmapSection;

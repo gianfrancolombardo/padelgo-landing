@@ -1,7 +1,10 @@
 import React from 'react';
 import { Leaf, Recycle } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const SustainabilitySection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="sostenibilidad" className="relative py-24 bg-[#050505] overflow-hidden border-t border-white/5">
       {/* Background glow effects */}
@@ -21,20 +24,18 @@ const SustainabilitySection: React.FC = () => {
                 <Leaf className="w-8 h-8" />
               </div>
               <h2 className="text-4xl md:text-6xl font-display font-bold leading-none uppercase tracking-wider text-white">
-                MÁS REPETICIONES. <br />
-                <span className="text-volea-green">MENOS RESIDUOS.</span>
+                {t('sustainability.title')} <br />
+                <span className="text-volea-green">{t('sustainability.titleGreen')}</span>
               </h2>
             </div>
 
             <div className="space-y-6">
               <p className="text-gray-300 font-light text-lg md:text-xl leading-relaxed border-l-2 border-volea-green/40 pl-6 py-2">
-                En VoleaBox entrenáis siempre con pelotas presurizadas al punto exacto de partida, sesión tras sesión. 
-                Las represurizamos después de cada uso y las renovamos cuando toca, reduciendo residuos sin sacrificar ni un gramo de calidad. 
-                Porque entrenar bien no tiene por qué costarle algo al planeta.
+                {t('sustainability.desc')}
               </p>
               <div className="flex items-center gap-3 text-xs tracking-wider text-gray-500 font-bold uppercase pl-6">
                 <Recycle className="w-4 h-4 text-volea-green" />
-                <span>Ecosistema 100% Sostenible</span>
+                <span>{t('sustainability.ecosystem')}</span>
               </div>
             </div>
           </div>

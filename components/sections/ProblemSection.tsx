@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Ban, TrendingDown } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const PainPoint: React.FC<{ icon: React.ReactNode; title: string; children: React.ReactNode; delay: string }> = ({ icon, title, children, delay }) => (
   <div className="glass-card p-8 rounded-2xl flex flex-col items-start hover:bg-white/5 transition-all duration-500 transform hover:-translate-y-2 group border border-white/5 hover:border-white/10" style={{ animationDelay: delay }}>
@@ -12,6 +13,8 @@ const PainPoint: React.FC<{ icon: React.ReactNode; title: string; children: Reac
 );
 
 const ProblemSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="problema" className="relative py-24 md:py-32 bg-[#050505] scroll-mt-20 overflow-hidden">
       {/* Background elements */}
@@ -27,24 +30,24 @@ const ProblemSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-6 relative z-10">
         <div className="max-w-3xl mb-16">
           <h2 className="text-4xl md:text-6xl font-display uppercase mb-6 leading-none">
-            <span className="text-white/30">Deja de Jugar</span> Partidos.<br />
-            Empieza a <span className="text-volea-green">Entrenar</span>.
+            <span className="text-white/30">{t('problem.titlePre')}</span>{t('problem.titlePreEnd')}<br />
+            {t('problem.titleStart')}<span className="text-volea-green">{t('problem.titleGreen')}</span>.
           </h2>
           <p className="text-lg text-gray-300 font-light max-w-xl border-l-2 border-volea-green pl-6 py-2">
-            El 90% de los jugadores amateur se estanca porque compite más de lo que practica.
-            <br /><span className="text-white/60 text-sm mt-2 block">La realidad es frustrante:</span>
+            {t('problem.desc')}
+            <br /><span className="text-white/60 text-sm mt-2 block">{t('problem.reality')}</span>
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-7xl">
-          <PainPoint icon={<Clock size={28} strokeWidth={1.5} />} title="LOGÍSTICA INVIABLE" delay="0s">
-            Sin invertir en equipamiento propio, sin cargar equipo pesado ni buscar enchufes. Demasiada fricción para entrenar una hora.
+          <PainPoint icon={<Clock size={28} strokeWidth={1.5} />} title={t('problem.painPoints.logistics.title')} delay="0s">
+            {t('problem.painPoints.logistics.desc')}
           </PainPoint>
-          <PainPoint icon={<Ban size={28} strokeWidth={1.5} />} title="DEPENDENCIA DE TERCEROS" delay="0.1s">
-            ¿Esperando a que alguien tenga hueco? ¿Coordinando horarios con tu pareja de entrenamientos? Quieres repetición, no gestión.
+          <PainPoint icon={<Ban size={28} strokeWidth={1.5} />} title={t('problem.painPoints.dependency.title')} delay="0.1s">
+            {t('problem.painPoints.dependency.desc')}
           </PainPoint>
-          <PainPoint icon={<TrendingDown size={28} strokeWidth={1.5} />} title="ESTANCAMIENTO" delay="0.2s">
-            Juegas tres veces por semana pero tu víbora sigue saliendo al cristal. Sin repetición aislada, no hay memoria muscular.
+          <PainPoint icon={<TrendingDown size={28} strokeWidth={1.5} />} title={t('problem.painPoints.stagnation.title')} delay="0.2s">
+            {t('problem.painPoints.stagnation.desc')}
           </PainPoint>
         </div>
       </div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { Mail, Phone, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const PascalCtaSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="contacto" className="py-32 relative overflow-hidden bg-[#020202]">
        <div className="absolute inset-0 bg-gradient-to-t from-volea-green/5 to-transparent"></div>
@@ -10,11 +13,11 @@ const PascalCtaSection: React.FC = () => {
          <div className="max-w-4xl mx-auto text-center border border-white/10 p-16 rounded-[3rem] bg-[#0A0A0A]/40 backdrop-blur-md">
            
            <h2 className="text-4xl md:text-7xl font-display text-white mb-8 tracking-wider">
-             HABLAMOS
+             {t('pascal.cta.title')}
            </h2>
            
            <p className="text-lg md:text-xl text-[#D1D5DB] font-light max-w-2xl mx-auto mb-14 leading-relaxed">
-             Lideremos juntos la transición hacia un deporte de raqueta sostenible y tecnológico en España. Tenemos el canal, los clubes y la operativa. Vosotros tenéis la mejor tecnología de presurización del mercado. Tiene todo el sentido hacerlo juntos.
+             {t('pascal.cta.desc')}
            </p>
 
            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-16">
@@ -32,7 +35,7 @@ const PascalCtaSection: React.FC = () => {
              href="mailto:carlos@voleabox.com?subject=Pascal%20Box%20Strategic%20Meeting" 
              className="group relative inline-flex items-center justify-center bg-volea-green text-black px-12 py-5 rounded-full text-lg font-bold tracking-widest hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(59,255,118,0.3)]"
            >
-             AGENDAR REUNIÓN ESTRATÉGICA
+             {t('pascal.cta.btn')}
              <ChevronRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
            </a>
 
@@ -40,7 +43,7 @@ const PascalCtaSection: React.FC = () => {
        </div>
 
        <div className="text-center py-10 opacity-40">
-          <p className="text-[10px] tracking-[0.5em] font-bold uppercase text-white">Carlos Neidl — Co-Founder — Barcelona, España</p>
+          <p className="text-[10px] tracking-[0.5em] font-bold uppercase text-white">{t('pascal.cta.carlos')}</p>
        </div>
     </section>
   );

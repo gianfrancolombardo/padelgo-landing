@@ -1,5 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const BenefitItem: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <div className="flex flex-col gap-4 p-6 rounded-2xl border border-transparent hover:border-white/5 hover:bg-white/5 transition-all duration-500 group">
@@ -14,32 +15,34 @@ const BenefitItem: React.FC<{ title: string; children: React.ReactNode }> = ({ t
 );
 
 const BenefitsSection: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="beneficios" className="py-24 bg-[#080808] border-t border-white/5 scroll-mt-20">
             <div className="max-w-[1440px] mx-auto px-6">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mx-auto">
                     <div>
                         <h2 className="text-4xl sm:text-6xl font-display font-bold leading-none mb-6">
-                            EL SECRETO DE <br />
-                            LOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-volea-green to-emerald-600">PROFESIONALES</span>.
+                            {t('benefits.title')}<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-volea-green to-emerald-600">{t('benefits.titleGreen')}</span>.
                         </h2>
                         <p className="text-xl text-gray-300 font-light max-w-md">
-                            La diferencia entre un amateur y un pro no es el talento, son las horas de repetición fuera del partido.
+                            {t('benefits.desc')}
                         </p>
                     </div>
 
                     <div className="grid sm:grid-cols-2 gap-4">
-                        <BenefitItem title="MEJORA REAL">
-                            Dale caña a tus golpes. Repite esa bandeja 100 veces seguidas hasta que salga sola.
+                        <BenefitItem title={t('benefits.items.improvement.title')}>
+                            {t('benefits.items.improvement.desc')}
                         </BenefitItem>
-                        <BenefitItem title="FRICCIÓN CERO">
-                            Tu tiempo vale oro. Úsalo para entrenar, no para coordinar con nadie.
+                        <BenefitItem title={t('benefits.items.friction.title')}>
+                            {t('benefits.items.friction.desc')}
                         </BenefitItem>
-                        <BenefitItem title="A TU RITMO">
-                            Entrena solo o comparte la sesión con quien quieras. Mismo equipamiento, misma calidad, coste dividido entre todos.
+                        <BenefitItem title={t('benefits.items.pace.title')}>
+                            {t('benefits.items.pace.desc')}
                         </BenefitItem>
-                        <BenefitItem title="ACCESO PREMIUM">
-                            Entrenamiento de élite sin depender de horarios ni de la disponibilidad de nadie.
+                        <BenefitItem title={t('benefits.items.premium.title')}>
+                            {t('benefits.items.premium.desc')}
                         </BenefitItem>
                     </div>
                 </div>

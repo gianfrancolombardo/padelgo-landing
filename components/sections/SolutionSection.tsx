@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smartphone, QrCode, Activity } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const SolutionStep: React.FC<{ icon: React.ReactNode; title: string; desc: string; image: string; delay: string }> = ({ icon, title, desc, image, delay }) => (
   <div className="group relative overflow-hidden rounded-3xl bg-[#0A0A0A] border border-white/5 hover:border-volea-green/30 transition-all duration-500 h-full flex flex-col hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,255,118,0.05)]" style={{ animationDelay: delay }}>
@@ -25,37 +26,39 @@ const SolutionStep: React.FC<{ icon: React.ReactNode; title: string; desc: strin
 );
 
 const SolutionSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="solucion" className="py-24 bg-[#050505] scroll-mt-20 overflow-hidden relative">
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-            EL PROCESO <span className="text-volea-green">VOLEABOX</span>
+            {t('solution.title')}<span className="text-volea-green">{t('solution.titleGreen')}</span>
           </h2>
           <p className="text-gray-400 font-light text-lg">
-            Lo hemos simplificado en 3 pasos para que no pierdas ni un minuto.
+            {t('solution.subtitle')}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <SolutionStep
             icon={<Smartphone size={32} strokeWidth={1.5} />}
-            title="1. RESERVA"
-            desc="Abre la app, elige tu hora y tu pista. En 3 clics tienes la sesión asegurada. Además, accede a los vídeos de los drills antes de llegar a la pista para que cuando llegues, ya sepas exactamente qué hacer."
+            title={t('solution.steps.reserve.title')}
+            desc={t('solution.steps.reserve.desc')}
             image="/assets/app-reservation.png"
             delay="0s"
           />
           <SolutionStep
             icon={<QrCode size={32} strokeWidth={1.5} />}
-            title="2. DESBLOQUEA"
-            desc="Escanea el código QR en la taquilla a pie de pista. Se abre sola y la máquina junto con todo el equipo de entrenamiento están listos para ti."
+            title={t('solution.steps.unlock.title')}
+            desc={t('solution.steps.unlock.desc')}
             image="/assets/locker-system.png"
             delay="0.1s"
           />
           <SolutionStep
             icon={<Activity size={32} strokeWidth={1.5} />}
-            title="3. ENTRENA"
-            desc="Configura tu sesión y mejora tu técnica sin distracciones ni esperas. Cientos de repeticiones en una sola hora."
+            title={t('solution.steps.train.title')}
+            desc={t('solution.steps.train.desc')}
             image="/assets/hero-court.png" // Reusing hero court for 'Train' generic visual if action shot is used elsewhere
             delay="0.2s"
           />

@@ -8,12 +8,18 @@ import SlingerExperienceSection from './sections/SlingerExperienceSection';
 import SlingerB2bSection from './sections/SlingerB2bSection';
 import SlingerRoadmapSection from './sections/SlingerRoadmapSection';
 import SlingerCtaSection from './sections/SlingerCtaSection';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const SlingerLanding: React.FC = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "VoleaBox x Slinger | Entrenamiento de Élite Automatizado";
   }, []);
+
+  useEffect(() => {
+    document.title = t('slinger.title');
+  }, [t]);
 
   return (
     <div className="min-h-screen bg-[#050505] text-[#FAFAFA] selection:bg-volea-green/30 selection:text-white overflow-x-hidden">

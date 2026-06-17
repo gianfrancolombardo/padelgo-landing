@@ -2,27 +2,27 @@ import React from 'react';
 import { Smartphone, Unlock, Activity } from 'lucide-react';
 import { useLanguage } from '../../../i18n/LanguageContext';
 
-const SlingerExperienceSection: React.FC = () => {
+const LanzadorasExperienceSection: React.FC = () => {
   const { t } = useLanguage();
 
   const steps = [
     {
       icon: <Smartphone className="w-7 h-7" />,
       number: "01",
-      title: t('slinger.experience.step1Title'),
-      description: t('slinger.experience.step1Desc'),
+      title: t('lanzadoras.experience.step1Title'),
+      description: t('lanzadoras.experience.step1Desc'),
     },
     {
       icon: <Unlock className="w-7 h-7" />,
       number: "02",
-      title: t('slinger.experience.step2Title'),
-      description: t('slinger.experience.step2Desc'),
+      title: t('lanzadoras.experience.step2Title'),
+      description: t('lanzadoras.experience.step2Desc'),
     },
     {
       icon: <Activity className="w-7 h-7" />,
       number: "03",
-      title: t('slinger.experience.step3Title'),
-      description: t('slinger.experience.step3Desc'),
+      title: t('lanzadoras.experience.step3Title'),
+      description: t('lanzadoras.experience.step3Desc'),
     }
   ];
 
@@ -34,12 +34,12 @@ const SlingerExperienceSection: React.FC = () => {
       <div className="max-w-[1440px] w-full mx-auto px-6 relative z-10">
         
         <div className="text-center mb-24">
-          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('slinger.experience.badge')}</div>
+          <div className="text-volea-green text-sm font-bold tracking-[0.4em] mb-6 uppercase">{t('lanzadoras.experience.badge')}</div>
           <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-8 leading-tight">
-            {t('slinger.experience.title')}
+            {t('lanzadoras.experience.title')}
           </h2>
           <p className="text-[#A1A1AA] text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-            {t('slinger.experience.desc')}
+            {t('lanzadoras.experience.desc')}
           </p>
         </div>
 
@@ -74,4 +74,4 @@ const SlingerExperienceSection: React.FC = () => {
   );
 };
 
-export default SlingerExperienceSection;
+export default LanzadorasExperienceSection;

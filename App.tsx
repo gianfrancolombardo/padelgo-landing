@@ -12,50 +12,57 @@ import ClubesLanding from './components/clubes/ClubesLanding';
 import PascalBoxLanding from './components/pascalbox/PascalBoxLanding';
 import SlingerLanding from './components/slinger/SlingerLanding';
 import LockerLanding from './components/locker/LockerLanding';
+import LanzadorasLanding from './components/lanzadoras/LanzadorasLanding';
+import { LanguageProvider } from './i18n/LanguageContext';
+import { redirectLegacyPath, resolveRoute, type AppRoute } from './i18n/routes';
 
-const App: React.FC = () => {
-  const [showPreview, setShowPreview] = React.useState(window.location.hash === '#preview');
-  const [isClubs, setIsClubs] = React.useState(window.location.pathname === '/clubes' || window.location.pathname === '/clubs');
-  const [isPascal, setIsPascal] = React.useState(window.location.pathname === '/pascalbox');
-  const [isSlinger, setIsSlinger] = React.useState(window.location.pathname === '/slinger');
-  const [isLocker, setIsLocker] = React.useState(window.location.pathname === '/lockers');
+const AppContent: React.FC = () => {
+  const [route, setRoute] = React.useState<AppRoute>(() =>
+    resolveRoute(window.location.pathname, window.location.hash)
+  );
 
   React.useEffect(() => {
-    const handleHashChange = () => {
-      setShowPreview(window.location.hash === '#preview');
+    const legacyTarget = redirectLegacyPath(window.location.pathname);
+    if (legacyTarget) {
+      window.history.replaceState(null, '', legacyTarget);
+      setRoute(resolveRoute(legacyTarget, window.location.hash));
+      return;
+    }
+
+    const syncRoute = () => {
+      setRoute(resolveRoute(window.location.pathname, window.location.hash));
     };
-    const handlePopState = () => {
-      setIsClubs(window.location.pathname === '/clubes' || window.location.pathname === '/clubs');
-      setIsPascal(window.location.pathname === '/pascalbox');
-      setIsSlinger(window.location.pathname === '/slinger');
-      setIsLocker(window.location.pathname === '/lockers');
-    };
-    window.addEventListener('hashchange', handleHashChange);
-    window.addEventListener('popstate', handlePopState);
+
+    window.addEventListener('hashchange', syncRoute);
+    window.addEventListener('popstate', syncRoute);
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', syncRoute);
+      window.removeEventListener('popstate', syncRoute);
     };
   }, []);
 
-  if (showPreview) {
+  if (route === 'preview') {
     return <ColorPreview />;
   }
 
-  if (isClubs) {
+  if (route === 'clubs') {
     return <ClubesLanding />;
   }
 
-  if (isPascal) {
+  if (route === 'pascalbox') {
     return <PascalBoxLanding />;
   }
 
-  if (isSlinger) {
+  if (route === 'slinger') {
     return <SlingerLanding />;
   }
 
-  if (isLocker) {
+  if (route === 'lockers') {
     return <LockerLanding />;
+  }
+
+  if (route === 'ballLaunchers') {
+    return <LanzadorasLanding />;
   }
 
   return (
@@ -71,6 +78,14 @@ const App: React.FC = () => {
       </main>
       <Footer />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 };
 

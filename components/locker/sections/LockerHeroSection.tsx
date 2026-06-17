@@ -1,7 +1,10 @@
 import React from 'react';
-import { Cpu, ChevronDown } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { useLanguage } from '../../../i18n/LanguageContext';
 
 const LockerHeroSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#050505]">
       {/* Background elements */}
@@ -16,17 +19,17 @@ const LockerHeroSection: React.FC = () => {
           <div className="space-y-10 order-2 lg:order-1">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass border border-volea-green/20 animate-fade-in">
               <span className="flex h-2 w-2 rounded-full bg-volea-green animate-pulse"></span>
-              <span className="text-volea-green text-[10px] font-black tracking-[0.2em] uppercase">Manufacturing Partner Program</span>
+              <span className="text-volea-green text-[10px] font-black tracking-[0.2em] uppercase">{t('locker.hero.badge')}</span>
             </div>
             
             <h1 className="text-6xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tight">
-              EL FUTURO DEL <br />
-              <span className="text-volea-green">SMART LOCKER</span> <br />
-              COMIENZA AQUÍ
+              {t('locker.hero.titlePre')} <br />
+              <span className="text-volea-green">{t('locker.hero.titleSpan')}</span> <br />
+              {t('locker.hero.titleEnd')}
             </h1>
             
             <p className="text-xl md:text-2xl text-[#A1A1AA] font-light max-w-xl leading-relaxed">
-              VoleaBox busca fabricantes de élite para escalar la mayor infraestructura de almacenamiento inteligente en el mundo del Pádel.
+              {t('locker.hero.subtitle')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6">
@@ -34,7 +37,7 @@ const LockerHeroSection: React.FC = () => {
                 onClick={() => document.getElementById('mercado')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-volea-green text-black px-10 py-5 rounded-2xl font-bold text-sm tracking-widest hover:bg-white transition-all duration-300 shadow-[0_10px_40px_rgba(59,255,118,0.2)] active:scale-95"
               >
-                VER PROYECCIÓN 2026
+                {t('locker.hero.btn')}
               </button>
               <div className="flex items-center gap-4 px-6 py-5 rounded-2xl glass border border-white/5">
                 <Cpu className="w-5 h-5 text-volea-green" />
