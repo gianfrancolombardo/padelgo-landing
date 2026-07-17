@@ -18,6 +18,17 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      test: {
+        globals: false,
+        environment: 'jsdom',
+        setupFiles: ['./vitest.setup.ts'],
+        include: ['**/*.{test,spec}.{ts,tsx}'],
+        env: loadEnv('test', process.cwd(), ''),
+        coverage: {
+          provider: 'v8',
+          include: ['lib/**', 'contexts/**', 'components/auth/**', 'components/booking/**', 'components/HeroCta.tsx', 'i18n/routes.ts'],
+        },
+      },
     };
 });

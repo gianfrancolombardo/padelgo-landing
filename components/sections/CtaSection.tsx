@@ -1,5 +1,5 @@
 import React from 'react';
-import WaitlistForm from '../WaitlistForm';
+import HeroCta from '../HeroCta';
 import { useLanguage } from '../../i18n/LanguageContext';
 
 const CtaSection: React.FC = () => {
@@ -7,8 +7,7 @@ const CtaSection: React.FC = () => {
 
   return (
     <section className="relative py-32 text-center overflow-hidden">
-      {/* Dynamic Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-volea-green/10 to-[#050505] z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-volea-green/10 to-[#050505] z-0" />
 
       <div className="max-w-[1440px] mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -20,10 +19,7 @@ const CtaSection: React.FC = () => {
             {t('cta.desc')}
           </p>
 
-          <WaitlistForm
-            buttonText={t('cta.btn')}
-            microCopy={t('cta.microcopy')}
-          />
+          <HeroCta variant="cta" />
         </div>
       </div>
     </section>

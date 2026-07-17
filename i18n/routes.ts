@@ -1,5 +1,9 @@
 export const ROUTES = {
   home: '/',
+  login: '/login',
+  register: '/register',
+  account: '/account',
+  book: '/book',
   clubs: '/clubs',
   pascalbox: '/pascalbox',
   slinger: '/slinger',
@@ -18,6 +22,10 @@ export const LEGACY_PATH_REDIRECTS: Record<string, string> = {
 
 export type AppRoute =
   | 'home'
+  | 'login'
+  | 'register'
+  | 'account'
+  | 'book'
   | 'clubs'
   | 'pascalbox'
   | 'slinger'
@@ -27,6 +35,10 @@ export type AppRoute =
 
 export function resolveRoute(pathname: string, hash: string): AppRoute {
   if (hash === '#preview') return 'preview';
+  if (pathname === ROUTES.login) return 'login';
+  if (pathname === ROUTES.register) return 'register';
+  if (pathname === ROUTES.account) return 'account';
+  if (pathname === ROUTES.book) return 'book';
   if (pathname === ROUTES.clubs) return 'clubs';
   if (pathname === ROUTES.pascalbox) return 'pascalbox';
   if (pathname === ROUTES.slinger) return 'slinger';

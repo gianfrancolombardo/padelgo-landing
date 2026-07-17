@@ -1,19 +1,24 @@
 import React from 'react';
-import Header from './components/Header';
 import HeroSection from './components/sections/HeroSection';
 import ProblemSection from './components/sections/ProblemSection';
 import SolutionSection from './components/sections/SolutionSection';
 import BenefitsSection from './components/sections/BenefitsSection';
 import SustainabilitySection from './components/sections/SustainabilitySection';
 import CtaSection from './components/sections/CtaSection';
-import Footer from './components/Footer';
+import FaqSection from './components/sections/FaqSection';
+import LandingShell from './components/layout/LandingShell';
 import ColorPreview from './components/ColorPreview';
 import ClubesLanding from './components/clubes/ClubesLanding';
 import PascalBoxLanding from './components/pascalbox/PascalBoxLanding';
 import SlingerLanding from './components/slinger/SlingerLanding';
 import LockerLanding from './components/locker/LockerLanding';
 import LanzadorasLanding from './components/lanzadoras/LanzadorasLanding';
+import LoginPage from './components/auth/LoginPage';
+import RegisterPage from './components/auth/RegisterPage';
+import AccountPage from './components/auth/AccountPage';
+import BookPage from './components/booking/BookPage';
 import { LanguageProvider } from './i18n/LanguageContext';
+import { AuthProvider } from './contexts/AuthContext';
 import { redirectLegacyPath, resolveRoute, type AppRoute } from './i18n/routes';
 
 const AppContent: React.FC = () => {
@@ -45,6 +50,22 @@ const AppContent: React.FC = () => {
     return <ColorPreview />;
   }
 
+  if (route === 'login') {
+    return <LoginPage />;
+  }
+
+  if (route === 'register') {
+    return <RegisterPage />;
+  }
+
+  if (route === 'account') {
+    return <AccountPage />;
+  }
+
+  if (route === 'book') {
+    return <BookPage />;
+  }
+
   if (route === 'clubs') {
     return <ClubesLanding />;
   }
@@ -66,25 +87,24 @@ const AppContent: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#020202] text-[#FAFAFA] overflow-x-hidden">
-      <Header />
-      <main className="w-full">
-        <HeroSection />
-        <ProblemSection />
-        <SolutionSection />
-        <BenefitsSection />
-        <SustainabilitySection />
-        <CtaSection />
-      </main>
-      <Footer />
-    </div>
+    <LandingShell>
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <BenefitsSection />
+      <SustainabilitySection />
+      <FaqSection />
+      <CtaSection />
+    </LandingShell>
   );
 };
 
 const App: React.FC = () => {
   return (
     <LanguageProvider>
-      <AppContent />
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
     </LanguageProvider>
   );
 };

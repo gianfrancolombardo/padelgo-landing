@@ -7,6 +7,7 @@
   <title>VoleaBox | La Revolución del Pádel Inteligente</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="/icon.png" />
+  <link rel="preload" as="image" href="/assets/hero-court.png" />
   <script>
     tailwind.config = {
       theme: {
@@ -91,6 +92,27 @@
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .auth-page-enter {
+      animation: authPageEnter 0.28s ease-out both;
+    }
+
+    @keyframes authPageEnter {
+      from {
+        opacity: 0.6;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .auth-page-enter {
+        animation: none;
+      }
     }
   </style>
   <script type="importmap">

@@ -1,20 +1,73 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1lQzuc5vGnv_MWUScxHM7faZvs5w0Ue_u
-
-## Run Locally
-
-**Prerequisites:**  Node.js
+# VoleaBox
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+Entrenamiento de pádel con máquina + IA. Piloto actual: modelo **concierge** (reserva online, sesión in situ) en clubes; visión a medio plazo: hub autónomo.
+
+
+
+**Equipo:** Gian (tecnología) · Carlos (operaciones).
+
+
+
+## Documentación
+
+
+
+Toda la verdad operativa del negocio está en **[`docs/README.md`](docs/README.md)** (Lean Canvas, brand, partners, piloto, decisiones).
+
+
+
+## Run locally
+
+
+
+**Prerequisites:** Node.js, pnpm
+
+
+
+1. Install dependencies: `pnpm install`
+
+2. Copy `.env.example` → `.env.local` and set Supabase keys (see below)
+
+3. Run: `pnpm dev` (default port **3000**)
+4. Run tests: `pnpm test` (unit + component; uses `.env.local` for Supabase integration tests)
+
+
+
+### Supabase Auth
+
+
+
+| Campo | Valor |
+
+|---|---|
+
+| Proyecto | `voleabox` |
+
+| Project ref | `dqrbnqmizvvaztoniagf` |
+
+| API URL | `https://dqrbnqmizvvaztoniagf.supabase.co` |
+
+
+
+En [Supabase Dashboard](https://supabase.com/dashboard/project/dqrbnqmizvvaztoniagf/auth/url-configuration) configurar:
+
+
+
+- **Site URL:** `http://localhost:3000` (dev) / URL de producción
+
+- **Redirect URLs:** `http://localhost:3000/**` y dominio de prod
+
+
+
+Para desarrollo rápido puedes desactivar *Confirm email* en Authentication → Providers → Email.
+
+
+
+Rutas de auth en la landing: `/login`, `/register`, `/account`.
+
+
+
+Landings (marketing / hipótesis H1) viven en este repo; no sustituyen el playbook del piloto en `docs/pilot/`.
+

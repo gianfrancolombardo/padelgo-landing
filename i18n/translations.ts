@@ -44,9 +44,10 @@ export const translations = {
       titleSpan: "NO MEJORA",
       titleEnd: " JUGANDO",
       subtitle: "La primera red de entrenamiento autónomo y sostenible para pádel y tenis.",
-      subtitleBr: "Abre la app y entrena como un pro.",
-      cta: "ÚNETE A LA REVOLUCIÓN",
-      microcopy: "Plazas limitadas para los primeros jugadores en Barcelona."
+      subtitleBr: "Crea tu cuenta, reserva tu pista y entrena con máquina e IA.",
+      ctaPrimary: "RESERVAR SESIÓN",
+      ctaSecondary: "Iniciar sesión",
+      microcopy: "Primeras sesiones en clubes de Barcelona."
     },
     problem: {
       titlePre: "Deja de Jugar",
@@ -121,9 +122,10 @@ export const translations = {
     cta: {
       title: "EL PÁDEL ESTÁ EVOLUCIONANDO. ",
       titleGreen: "¿Y TÚ?",
-      desc: "Estamos cerrando acuerdos con los primeros clubes de Barcelona. Apúntate y sé el primero en probar la experiencia VoleaBox.",
-      btn: "QUIERO MEJORAR YA",
-      microcopy: "Acceso prioritario para los primeros inscritos."
+      desc: "Regístrate, elige tu horario y da el salto al entrenamiento de élite. Sin listas de espera.",
+      btnPrimary: "RESERVAR SESIÓN",
+      btnSecondary: "Ya tengo cuenta",
+      microcopy: "Acceso inmediato a tu área de entrenamiento."
     },
     waitlistForm: {
       submitting: "Enviando",
@@ -131,6 +133,115 @@ export const translations = {
       success: "¡Gracias! Estás dentro. Te avisaremos pronto.",
       error: "Hubo un error al enviar.",
       networkError: "Hubo un error. Inténtalo de nuevo."
+    },
+    auth: {
+      email: "Correo electrónico",
+      password: "Contraseña",
+      fullName: "Nombre (opcional)",
+      backHome: "← Volver al inicio",
+      access: "ACCEDER",
+      logout: "Cerrar sesión",
+      login: {
+        title: "INICIAR SESIÓN",
+        subtitle: "Accede a tu cuenta VoleaBox",
+        submit: "Entrar",
+        link: "Iniciar sesión",
+        noAccount: "¿No tienes cuenta?"
+      },
+      register: {
+        title: "CREAR CUENTA",
+        subtitle: "Regístrate para reservar tu sesión de entrenamiento",
+        submit: "Registrarme",
+        link: "Crear cuenta",
+        hasAccount: "¿Ya tienes cuenta?",
+        confirmTitle: "CONFIRMA TU EMAIL",
+        confirmSubtitle: "Te hemos enviado un enlace de verificación",
+        checkEmail: "Revisa tu bandeja de entrada y confirma tu correo para poder iniciar sesión."
+      },
+      account: {
+        title: "MI CUENTA",
+        subtitle: "Tu espacio de entrenamiento VoleaBox",
+        link: "Mi cuenta",
+        comingSoon: "Próximamente: reserva de horarios y gestión de sesiones."
+      },
+      reset: {
+        link: "¿Olvidaste tu contraseña?",
+        submit: "Enviar enlace de recuperación",
+        backToLogin: "Volver al login",
+        sent: "Si el correo existe, recibirás un enlace para restablecer tu contraseña."
+      },
+      errors: {
+        generic: "No se pudo completar la operación. Inténtalo de nuevo.",
+        invalidCredentials: "Correo o contraseña incorrectos.",
+        emailTaken: "Este correo ya está registrado.",
+        weakPassword: "La contraseña debe tener al menos 6 caracteres.",
+        samePassword: "La nueva contraseña debe ser diferente.",
+        rateLimit: "Demasiados intentos. Espera un momento.",
+        signupDisabled: "El registro no está disponible en este momento."
+      }
+    },
+    booking: {
+      title: "RESERVAR",
+      subtitle: "Elige centro, día y hora",
+      header: { reserve: "RESERVAR" },
+      steps: {
+        club: "Selecciona tu club",
+        schedule: "Elige día y hora",
+        day: "Elige el día",
+        time: "Elige la hora",
+        confirm: "Revisa tu reserva"
+      },
+      summary: { club: "Club", date: "Fecha", time: "Horario" },
+      confirm: "Confirmar reserva",
+      back: "Atrás",
+      empty: { clubs: "No hay clubes disponibles en este momento." },
+      success: {
+        confirmedTitle: "¡Reserva confirmada!",
+        confirmedBody: "Te hemos enviado un email con los detalles. Nos vemos en la pista.",
+        pendingTitle: "Solicitud enviada",
+        pendingBody: "El club validará la disponibilidad. Te avisaremos por email.",
+        viewAccount: "Ver mis reservas",
+        bookAnother: "Reservar otra sesión"
+      },
+      status: {
+        confirmed: "Confirmada",
+        pending_confirmation: "Pendiente"
+      },
+      account: {
+        upcoming: "Próximas reservas",
+        new: "Nueva",
+        empty: "Aún no tienes reservas.",
+        bookCta: "Reservar sesión",
+        cancel: "Cancelar reserva",
+        cancelConfirm: "¿Seguro que quieres cancelar esta reserva?",
+        cancelClosed: "Ya no puedes cancelar online (ventana mínima de antelación).",
+        retry: "Reintentar"
+      },
+      errors: {
+        loadClubs: "No pudimos cargar los clubes.",
+        loadSlots: "No pudimos cargar los horarios.",
+        loadBookings: "No pudimos cargar tus reservas.",
+        noSlots: "No hay horarios disponibles en este club.",
+        slot_not_available: "Ese horario ya no está disponible. Elige otro.",
+        cancellation_closed: "Fuera de la ventana de cancelación.",
+        unknown: "Algo salió mal. Inténtalo de nuevo."
+      }
+    },
+    faq: {
+      title: "Preguntas frecuentes",
+      subtitle: "Todo lo que necesitas antes de reservar.",
+      duration: {
+        q: "¿Cuánto dura la sesión?",
+        a: "Cada slot es de 60 minutos: briefing rápido y entrenamiento con máquina e IA."
+      },
+      includes: {
+        q: "¿Qué incluye?",
+        a: "Máquina Tenniix, pelotas presurizadas y soporte in situ de nuestro concierge en el piloto."
+      },
+      cancel: {
+        q: "¿Puedo cancelar?",
+        a: "Sí, hasta {hours} horas antes del inicio desde tu cuenta. Después, contacta con el club."
+      }
     },
     footer: {
       rights: "TODOS LOS DERECHOS RESERVADOS.",
@@ -574,9 +685,10 @@ export const translations = {
       titleSpan: "DOESN'T IMPROVE",
       titleEnd: " BY PLAYING",
       subtitle: "The first autonomous and sustainable training network for padel and tennis.",
-      subtitleBr: "Open the app and train like a pro.",
-      cta: "JOIN THE REVOLUTION",
-      microcopy: "Limited spots for the first players in Barcelona."
+      subtitleBr: "Create your account, book your court and train with machine and AI.",
+      ctaPrimary: "BOOK SESSION",
+      ctaSecondary: "Sign in",
+      microcopy: "First sessions at clubs in Barcelona."
     },
     problem: {
       titlePre: "Stop Playing",
@@ -651,9 +763,10 @@ export const translations = {
     cta: {
       title: "PADEL IS EVOLVING. ",
       titleGreen: "ARE YOU?",
-      desc: "We are closing agreements with the first clubs in Barcelona. Sign up and be the first to try the VoleaBox experience.",
-      btn: "I WANT TO IMPROVE NOW",
-      microcopy: "Priority access for the first signups."
+      desc: "Sign up, pick your slot and level up your training. No waitlists.",
+      btnPrimary: "BOOK SESSION",
+      btnSecondary: "I have an account",
+      microcopy: "Instant access to your training area."
     },
     waitlistForm: {
       submitting: "Sending",
@@ -661,6 +774,115 @@ export const translations = {
       success: "Thank you! You're in. We'll notify you soon.",
       error: "There was an error sending.",
       networkError: "There was an error. Please try again."
+    },
+    auth: {
+      email: "Email address",
+      password: "Password",
+      fullName: "Full name (optional)",
+      backHome: "← Back to home",
+      access: "SIGN IN",
+      logout: "Sign out",
+      login: {
+        title: "SIGN IN",
+        subtitle: "Access your VoleaBox account",
+        submit: "Sign in",
+        link: "Sign in",
+        noAccount: "Don't have an account?"
+      },
+      register: {
+        title: "CREATE ACCOUNT",
+        subtitle: "Register to book your training session",
+        submit: "Create account",
+        link: "Create account",
+        hasAccount: "Already have an account?",
+        confirmTitle: "CONFIRM YOUR EMAIL",
+        confirmSubtitle: "We sent you a verification link",
+        checkEmail: "Check your inbox and confirm your email before signing in."
+      },
+      account: {
+        title: "MY ACCOUNT",
+        subtitle: "Your VoleaBox training space",
+        link: "My account",
+        comingSoon: "Coming soon: slot booking and session management."
+      },
+      reset: {
+        link: "Forgot your password?",
+        submit: "Send recovery link",
+        backToLogin: "Back to sign in",
+        sent: "If the email exists, you will receive a password reset link."
+      },
+      errors: {
+        generic: "Could not complete the operation. Please try again.",
+        invalidCredentials: "Incorrect email or password.",
+        emailTaken: "This email is already registered.",
+        weakPassword: "Password must be at least 6 characters.",
+        samePassword: "New password must be different.",
+        rateLimit: "Too many attempts. Please wait a moment.",
+        signupDisabled: "Registration is not available right now."
+      }
+    },
+    booking: {
+      title: "BOOK",
+      subtitle: "Pick club, day and time",
+      header: { reserve: "BOOK" },
+      steps: {
+        club: "Select your club",
+        schedule: "Pick day and time",
+        day: "Choose a day",
+        time: "Choose a time",
+        confirm: "Review your booking"
+      },
+      summary: { club: "Club", date: "Date", time: "Time" },
+      confirm: "Confirm booking",
+      back: "Back",
+      empty: { clubs: "No clubs are available right now." },
+      success: {
+        confirmedTitle: "Booking confirmed!",
+        confirmedBody: "We sent you an email with the details. See you on court.",
+        pendingTitle: "Request sent",
+        pendingBody: "The club will validate availability. We'll email you shortly.",
+        viewAccount: "View my bookings",
+        bookAnother: "Book another session"
+      },
+      status: {
+        confirmed: "Confirmed",
+        pending_confirmation: "Pending"
+      },
+      account: {
+        upcoming: "Upcoming bookings",
+        new: "New",
+        empty: "You have no bookings yet.",
+        bookCta: "Book a session",
+        cancel: "Cancel booking",
+        cancelConfirm: "Are you sure you want to cancel this booking?",
+        cancelClosed: "Online cancellation is no longer available (minimum notice window).",
+        retry: "Retry"
+      },
+      errors: {
+        loadClubs: "We could not load clubs.",
+        loadSlots: "We could not load time slots.",
+        loadBookings: "We could not load your bookings.",
+        noSlots: "No time slots available at this club.",
+        slot_not_available: "That slot is no longer available. Pick another.",
+        cancellation_closed: "Outside the cancellation window.",
+        unknown: "Something went wrong. Please try again."
+      }
+    },
+    faq: {
+      title: "FAQ",
+      subtitle: "What you need to know before booking.",
+      duration: {
+        q: "How long is a session?",
+        a: "Each slot is 60 minutes: quick briefing plus machine and AI training."
+      },
+      includes: {
+        q: "What's included?",
+        a: "Tenniix machine, pressurized balls and on-site concierge support during the pilot."
+      },
+      cancel: {
+        q: "Can I cancel?",
+        a: "Yes, up to {hours} hours before start from your account. After that, contact the club."
+      }
     },
     footer: {
       rights: "ALL RIGHTS RESERVED.",
